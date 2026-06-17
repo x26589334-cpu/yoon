@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>페이브릿지 — 서울 전역 카드단말기·포스기 설치 전문</title>
+<meta name="description" content="서울 25개 자치구 카드단말기·포스기·키오스크 설치 전문. 당일 설치, 설치비 0원, 업계 최저 수수료. 강남구부터 중랑구까지 동 단위 방문 설치." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+<style>
+  :root{
+    --ink:#16202C;--ink-soft:#33414F;--brand:#0E9F6E;--brand-bright:#16C784;--brand-dark:#0A7E58;
+    --bg:#F6F8F9;--paper:#FFFFFF;--line:#E4E9EC;--muted:#5C6B78;
+    --shadow:0 18px 50px -28px rgba(22,32,44,.4);--maxw:1140px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Pretendard',system-ui,-apple-system,sans-serif;color:var(--ink);background:var(--bg);line-height:1.65;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,h4{letter-spacing:-.02em;line-height:1.3;font-weight:800}
+  a{color:inherit;text-decoration:none}
+  img,svg{display:block}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+  .eyebrow{display:inline-block;font-size:.76rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--brand);margin-bottom:12px}
+  .btn{display:inline-flex;align-items:center;gap:8px;justify-content:center;padding:14px 24px;border-radius:12px;font-weight:700;font-size:.95rem;border:1.5px solid transparent;cursor:pointer;transition:transform .15s,box-shadow .2s,background .2s}
+  .btn-primary{background:var(--brand);color:#fff}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 14px 28px -12px rgba(14,159,110,.6);background:var(--brand-dark)}
+  .btn-dark{background:var(--ink);color:#fff}
+  .btn-dark:hover{transform:translateY(-2px);box-shadow:0 14px 28px -14px rgba(22,32,44,.6)}
+  .btn-ghost{background:#fff;border-color:var(--line);color:var(--ink)}
+  .btn-ghost:hover{border-color:var(--brand);color:var(--brand)}
+
+  .topbar{background:var(--ink);color:#fff;text-align:center;font-size:.82rem;padding:9px 16px}
+  .topbar b{color:var(--brand-bright)}
+
+  header.nav{position:sticky;top:0;z-index:50;background:rgba(246,248,249,.88);backdrop-filter:blur(10px);border-bottom:1px solid transparent;transition:.2s}
+  header.nav.scrolled{border-color:var(--line);box-shadow:0 6px 22px -20px rgba(22,32,44,.5)}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:66px}
+  .logo{display:flex;align-items:center;gap:9px;font-weight:800;font-size:1.25rem}
+  .logo .mark{width:30px;height:30px;flex:none}
+  .nav-links{display:flex;gap:26px;align-items:center}
+  .nav-links a{font-size:.92rem;font-weight:600;color:var(--ink-soft);transition:.15s}
+  .nav-links a:hover{color:var(--brand)}
+  .nav-cta{display:flex;gap:10px;align-items:center}
+  .menu-toggle{display:none;background:none;border:0;cursor:pointer;padding:6px}
+  .menu-toggle span{display:block;width:24px;height:2px;background:var(--ink);margin:5px 0;transition:.25s}
+
+  .crumb{background:#fff;border-bottom:1px solid var(--line);font-size:.82rem;color:var(--muted)}
+  .crumb .wrap{padding-top:12px;padding-bottom:12px}
+  .crumb span{color:var(--brand);font-weight:700}
+
+  .hero{padding:60px 0 70px}
+  .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+  .loc-pill{display:inline-flex;align-items:center;gap:8px;font-size:.82rem;font-weight:700;color:var(--brand-dark);background:#E5F6EE;border:1px solid #C4EBD8;padding:7px 14px;border-radius:999px;margin-bottom:18px}
+  .hero h1{font-size:clamp(2.1rem,4.4vw,3.2rem);margin-bottom:18px}
+  .hero h1 .hl{color:var(--brand)}
+  .hero p.lead{font-size:1.06rem;color:var(--ink-soft);max-width:500px;margin-bottom:28px}
+  .hero-cta{display:flex;gap:12px;flex-wrap:wrap}
+  .quick-points{margin-top:26px;display:flex;gap:18px;flex-wrap:wrap}
+  .qp{display:flex;align-items:center;gap:8px;font-size:.9rem;font-weight:600;color:var(--ink-soft)}
+  .qp .c{color:var(--brand);font-weight:900}
+
+  .device-card{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:30px;box-shadow:var(--shadow)}
+  .device-card .tagline{font-size:.78rem;font-weight:800;letter-spacing:.12em;color:var(--brand);margin-bottom:18px;text-transform:uppercase}
+  .device-row{display:flex;gap:14px;justify-content:center;margin-bottom:22px}
+  .device{flex:1;text-align:center;border:1px solid var(--line);border-radius:14px;padding:18px 10px;background:var(--bg)}
+  .device .ic{font-size:2rem;margin-bottom:8px}
+  .device .nm{font-size:.84rem;font-weight:800}
+  .device .ds{font-size:.72rem;color:var(--muted);margin-top:2px}
+  .approve{display:flex;align-items:center;gap:10px;background:#E5F6EE;border:1px solid #C4EBD8;border-radius:12px;padding:14px 16px}
+  .approve .badge{width:34px;height:34px;border-radius:50%;background:var(--brand);color:#fff;display:grid;place-items:center;font-weight:900;flex:none}
+  .approve .t{font-size:.84rem;font-weight:700}
+  .approve .t span{display:block;font-size:.74rem;color:var(--muted);font-weight:500}
+
+  .stats{background:var(--ink);color:#fff;padding:46px 0}
+  .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;text-align:center}
+  .stat .num{font-weight:800;font-size:clamp(1.8rem,3.2vw,2.6rem);color:var(--brand-bright);line-height:1;font-variant-numeric:tabular-nums}
+  .stat .lab{font-size:.88rem;color:#c1ccd6;margin-top:9px}
+
+  section.block{padding:80px 0}
+  .head{text-align:center;max-width:680px;margin:0 auto 46px}
+  .head h2{font-size:clamp(1.8rem,3.2vw,2.4rem);margin-bottom:13px}
+  .head p{color:var(--muted);font-size:1.0rem}
+
+  /* region selector */
+  .region{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .gu-grid{display:flex;flex-wrap:wrap;gap:9px;justify-content:center;margin-bottom:32px}
+  .gu-btn{font-size:.88rem;font-weight:700;padding:9px 16px;border-radius:999px;border:1.5px solid var(--line);background:#fff;color:var(--ink-soft);cursor:pointer;transition:.15s}
+  .gu-btn:hover{border-color:var(--brand);color:var(--brand)}
+  .gu-btn.on{background:var(--brand);color:#fff;border-color:var(--brand)}
+  .gu-panel{display:none;background:var(--bg);border:1px solid var(--line);border-radius:18px;padding:30px}
+  .gu-panel.on{display:block;animation:fade .35s ease}
+  @keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+  .gu-panel h3{font-size:1.3rem;margin-bottom:8px}
+  .gu-panel .gu-desc{font-size:.92rem;color:var(--muted);margin-bottom:20px}
+  .dong-wrap{display:flex;flex-wrap:wrap;gap:10px}
+  .dong-chip{font-size:.88rem;font-weight:600;color:var(--ink-soft);background:#fff;border:1px solid var(--line);padding:9px 15px;border-radius:10px;transition:.15s}
+  .dong-chip:hover{border-color:var(--brand);color:var(--brand);background:#E5F6EE}
+
+  .info{background:var(--bg)}
+  .info-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+  .info-box{border:1px solid var(--line);border-radius:16px;padding:26px;background:#fff}
+  .info-box h3{font-size:1.1rem;margin-bottom:16px;display:flex;align-items:center;gap:9px}
+  .kv{display:flex;gap:10px;padding:9px 0;border-bottom:1px dashed var(--line);font-size:.92rem}
+  .kv:last-child{border-bottom:0}
+  .kv .k{width:96px;flex:none;color:var(--muted);font-weight:700}
+  .kv .v{color:var(--ink-soft)}
+  .tbl{width:100%;border-collapse:collapse;font-size:.9rem;margin-top:4px}
+  .tbl th,.tbl td{border:1px solid var(--line);padding:10px 12px;text-align:center}
+  .tbl th{background:var(--ink);color:#fff;font-weight:700}
+  .tbl td:first-child{font-weight:700;background:#fff}
+  .tags-line{display:flex;flex-wrap:wrap;gap:7px;margin-top:6px}
+  .tg{font-size:.8rem;font-weight:600;color:var(--ink-soft);background:#fff;border:1px solid var(--line);padding:5px 11px;border-radius:8px}
+
+  .why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+  .why{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:26px;transition:.18s}
+  .why:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:var(--brand)}
+  .why .ico{width:50px;height:50px;border-radius:12px;background:#E5F6EE;display:grid;place-items:center;font-size:1.6rem;margin-bottom:15px}
+  .why .fno{font-size:.72rem;font-weight:800;letter-spacing:.1em;color:var(--brand);margin-bottom:6px}
+  .why h3{font-size:1.08rem;margin-bottom:8px}
+  .why p{font-size:.88rem;color:var(--muted)}
+
+  .ind{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .ind-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+  .ind-card{border:1px solid var(--line);border-radius:18px;padding:30px;background:var(--bg);transition:.18s}
+  .ind-card:hover{border-color:var(--brand);box-shadow:var(--shadow)}
+  .ind-card .top{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+  .ind-card .ic{font-size:1.8rem;width:52px;height:52px;border-radius:13px;background:#fff;border:1px solid var(--line);display:grid;place-items:center}
+  .ind-card .top h3{font-size:1.2rem}
+  .ind-card .top .sub{font-size:.82rem;color:var(--brand);font-weight:700}
+  .ind-card ul{list-style:none;display:grid;gap:11px}
+  .ind-card li{font-size:.9rem;color:var(--ink-soft);padding-left:24px;position:relative}
+  .ind-card li::before{content:"✓";position:absolute;left:0;color:var(--brand);font-weight:900}
+  .ind-card li b{color:var(--ink)}
+
+  .apply-wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px;align-items:center}
+  .apply-copy h2{font-size:clamp(1.7rem,3vw,2.3rem);margin-bottom:14px}
+  .apply-copy p{color:var(--muted);margin-bottom:20px}
+  .apply-copy .biglist{display:grid;gap:12px}
+  .apply-copy .biglist div{display:flex;gap:10px;font-weight:600;color:var(--ink-soft)}
+  .apply-copy .biglist .c{color:var(--brand);font-weight:900}
+  .form-card{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:30px;box-shadow:var(--shadow)}
+  .form-card h3{font-size:1.15rem;margin-bottom:4px}
+  .form-card .sub{font-size:.84rem;color:var(--muted);margin-bottom:20px}
+  .field{margin-bottom:14px}
+  .field label{display:block;font-size:.8rem;font-weight:700;color:var(--ink-soft);margin-bottom:7px}
+  .chips{display:flex;gap:8px;flex-wrap:wrap}
+  .chip{font-size:.82rem;font-weight:600;padding:8px 14px;border-radius:10px;border:1.5px solid var(--line);background:#fff;cursor:pointer;transition:.15s;color:var(--ink-soft)}
+  .chip:hover{border-color:var(--brand)}
+  .chip.on{background:var(--brand);color:#fff;border-color:var(--brand)}
+  .field input,.field select{width:100%;padding:12px 14px;border:1.5px solid var(--line);border-radius:10px;font-size:.95rem;font-family:inherit;transition:.15s;background:#fff}
+  .field input:focus,.field select:focus{outline:none;border-color:var(--brand)}
+  .form-card .btn{width:100%;margin-top:6px}
+  .form-note{text-align:center;font-size:.76rem;color:var(--muted);margin-top:12px}
+  .form-success{display:none;text-align:center;padding:22px 6px}
+  .form-success.show{display:block}
+  .form-success .check{width:58px;height:58px;border-radius:50%;background:var(--brand);color:#fff;display:grid;place-items:center;font-size:1.7rem;margin:0 auto 14px;font-weight:900}
+
+  .price-tbl{width:100%;border-collapse:collapse;font-size:.94rem;margin-top:8px;background:#fff;border-radius:14px;overflow:hidden;box-shadow:var(--shadow)}
+  .price-tbl th,.price-tbl td{border:1px solid var(--line);padding:14px;text-align:center;font-variant-numeric:tabular-nums}
+  .price-tbl thead th{background:var(--ink);color:#fff}
+  .price-tbl td:first-child{font-weight:800;background:var(--bg);text-align:left}
+  .price-tbl .hl{color:var(--brand);font-weight:800}
+  .price-note{font-size:.82rem;color:var(--muted);margin-top:14px;text-align:center}
+
+  .seo{background:#fff;border-top:1px solid var(--line)}
+  .seo h2{font-size:1.5rem;margin-bottom:14px}
+  .seo .intro{color:var(--ink-soft);max-width:840px;margin-bottom:30px}
+  .seo-gu{margin-bottom:22px}
+  .seo-gu h4{font-size:.96rem;color:var(--ink);margin-bottom:10px;padding-left:10px;border-left:3px solid var(--brand)}
+  .kw{display:flex;flex-wrap:wrap;gap:6px}
+  .kw span{font-size:.76rem;color:var(--muted);background:var(--bg);border:1px solid var(--line);padding:4px 10px;border-radius:7px}
+
+  .bizseo{background:var(--bg);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .biz-cat{margin-bottom:24px}
+  .biz-cat h4{font-size:1rem;color:var(--ink);margin-bottom:12px;display:flex;align-items:center;gap:8px;padding-left:12px;border-left:3px solid var(--brand)}
+  .biz-chips{display:flex;flex-wrap:wrap;gap:8px}
+  .biz-chips span{font-size:.85rem;font-weight:600;color:var(--ink-soft);background:#fff;border:1px solid var(--line);padding:7px 13px;border-radius:9px;transition:.15s;cursor:default}
+  .biz-chips span:hover{border-color:var(--brand);color:var(--brand);background:#E5F6EE}
+  .term-box{background:var(--ink);color:#fff;border-radius:18px;padding:30px 28px;margin-top:34px}
+  .term-box .tt{font-size:1.15rem;font-weight:800;margin-bottom:6px;display:flex;align-items:center;gap:9px;color:#fff}
+  .term-box .td{font-size:.9rem;color:#c1ccd6;margin-bottom:18px}
+  .term-chips{display:flex;flex-wrap:wrap;gap:9px}
+  .term-chips span{font-size:.86rem;font-weight:700;color:#fff;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);padding:8px 14px;border-radius:10px}
+  .term-chips span.hot{background:var(--brand);border-color:var(--brand)}
+
+  .final{padding:90px 0;text-align:center;background:linear-gradient(135deg,var(--ink),#1f3242)}
+  .final .eyebrow{color:var(--brand-bright)}
+  .final h2{font-size:clamp(1.9rem,3.4vw,2.6rem);color:#fff;margin-bottom:14px}
+  .final p{color:#c1ccd6;font-size:1.04rem;margin-bottom:28px;max-width:560px;margin-left:auto;margin-right:auto}
+  .final .hero-cta{justify-content:center}
+
+  footer{background:#0E1820;color:#9aa6b2;padding:50px 0 28px;font-size:.88rem}
+  .foot-grid{display:flex;justify-content:space-between;gap:36px;flex-wrap:wrap;margin-bottom:26px}
+  .foot-grid .logo{color:#fff;margin-bottom:12px}
+  footer p{max-width:430px;line-height:1.8}
+  .foot-links{display:flex;gap:24px;flex-wrap:wrap}
+  .foot-links a{color:#9aa6b2;transition:.15s}
+  .foot-links a:hover{color:var(--brand-bright)}
+  .foot-bottom{border-top:1px solid #1c2933;padding-top:20px;color:#69757f;font-size:.8rem}
+
+  .floaters{position:fixed;right:16px;bottom:16px;z-index:60;display:flex;flex-direction:column;gap:10px}
+  .floaters a{width:54px;height:54px;border-radius:50%;display:grid;place-items:center;font-size:1.35rem;box-shadow:var(--shadow);transition:.15s}
+  .floaters a:hover{transform:scale(1.08)}
+  .fl-kakao{background:#FEE500}
+  .fl-tel{background:var(--brand);color:#fff}
+
+  .reveal{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
+  .reveal.in{opacity:1;transform:none}
+
+  @media(max-width:900px){
+    .hero-grid,.apply-wrap{grid-template-columns:1fr;gap:34px}
+    .why-grid,.stats-grid{grid-template-columns:repeat(2,1fr);gap:28px 18px}
+    .info-grid,.ind-grid{grid-template-columns:1fr}
+    .nav-links{display:none}
+    .nav-links.open{display:flex;position:absolute;top:66px;left:0;right:0;flex-direction:column;background:var(--bg);padding:18px 22px;gap:15px;border-bottom:1px solid var(--line)}
+    .menu-toggle{display:block}
+    .nav-cta .btn-ghost{display:none}
+  }
+  @media(max-width:560px){
+    .why-grid{grid-template-columns:1fr}
+    section.block{padding:56px 0}
+    .price-tbl{font-size:.82rem}
+    .price-tbl th,.price-tbl td{padding:9px 6px}
+  }
+  @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<div class="topbar">💳 지금 상담하면 <b>설치비 0원 + 당일 설치</b> · 업계 최저 카드 수수료 · 서울 전역 동 단위 방문</div>
+
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a href="#top" class="logo">
+      <svg class="mark" viewBox="0 0 40 40" fill="none">
+        <rect width="40" height="40" rx="11" fill="#16202C"/>
+        <rect x="9" y="13" width="22" height="15" rx="2.5" fill="#16C784"/>
+        <rect x="9" y="17" width="22" height="3" fill="#0A7E58"/>
+        <circle cx="14" cy="24" r="1.6" fill="#16202C"/>
+      </svg>
+      페이브릿지
+    </a>
+    <nav class="nav-links" id="navlinks">
+      <a href="#regions">지역 안내</a>
+      <a href="#why">왜 페이브릿지</a>
+      <a href="#industries">업종별 솔루션</a>
+      <a href="#pricing">요금</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="tel:01068321994" class="btn btn-primary">📞 전화 상담</a>
+      <button class="menu-toggle" id="menuBtn" aria-label="메뉴"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="crumb"><div class="wrap">홈 › <span>서울특별시</span></div></div>
+
+<a id="top"></a>
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="reveal in">
+      <span class="loc-pill">📍 서울특별시 25개 자치구 전역</span>
+      <h1>서울 소상공인<br><span class="hl">카드단말기·포스기</span><br>당일 설치 전문</h1>
+      <p class="lead">강남구부터 중랑구까지 — 서울 전 지역 동 단위로 방문 설치합니다. 신규 창업·단말기 교체 모두 설치비 0원, 업계 최저 수수료, 모든 카드사 일괄 가맹으로 처리해 드립니다.</p>
+      <div class="hero-cta">
+        <a href="tel:01068321994" class="btn btn-primary">📞 전화 상담 010-6832-1994</a>
+        <a href="#regions" class="btn btn-ghost">우리 동네 찾기</a>
+      </div>
+      <div class="quick-points">
+        <div class="qp"><span class="c">✓</span> 당일 설치</div>
+        <div class="qp"><span class="c">✓</span> 설치비 0원</div>
+        <div class="qp"><span class="c">✓</span> 24시간 AS</div>
+      </div>
+    </div>
+    <div class="device-card reveal in">
+      <div class="tagline">취급 단말기 라인업</div>
+      <div class="device-row">
+        <div class="device"><div class="ic">💳</div><div class="nm">카드단말기</div><div class="ds">유선·무선·휴대형</div></div>
+        <div class="device"><div class="ic">🖥️</div><div class="nm">포스(POS)</div><div class="ds">매장 통합 관리</div></div>
+        <div class="device"><div class="ic">📱</div><div class="nm">키오스크</div><div class="ds">무인 주문·결제</div></div>
+      </div>
+      <div class="approve">
+        <div class="badge">✓</div>
+        <div class="t">결제 승인 완료<span>모든 카드·간편결제·QR 한 대로 처리</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="stats" id="statsSec">
+  <div class="wrap stats-grid">
+    <div class="stat"><div class="num" data-target="25" data-suffix="개 구">0</div><div class="lab">서울 전 자치구</div></div>
+    <div class="stat"><div class="num" data-target="18000" data-suffix="+">0</div><div class="lab">누적 설치 매장</div></div>
+    <div class="stat"><div class="num" data-target="0" data-suffix="원">0</div><div class="lab">초기 설치 비용</div></div>
+    <div class="stat"><div class="num" data-target="99" data-suffix="%">0</div><div class="lab">재계약 만족도</div></div>
+  </div>
+</section>
+
+<section class="block region" id="regions">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">Seoul Coverage</span>
+      <h2>서울 자치구별 설치 지역</h2>
+      <p>자치구를 선택하면 동네별 설치 가능 지역을 확인할 수 있어요. 서울 전역 동 단위까지 방문합니다.</p>
+    </div>
+    <div class="gu-grid reveal" id="guGrid">
+        <button class="gu-btn on" data-gu="0">강남구</button>
+        <button class="gu-btn" data-gu="1">강동구</button>
+        <button class="gu-btn" data-gu="2">강북구</button>
+        <button class="gu-btn" data-gu="3">강서구</button>
+        <button class="gu-btn" data-gu="4">관악구</button>
+        <button class="gu-btn" data-gu="5">광진구</button>
+        <button class="gu-btn" data-gu="6">구로구</button>
+        <button class="gu-btn" data-gu="7">금천구</button>
+        <button class="gu-btn" data-gu="8">노원구</button>
+        <button class="gu-btn" data-gu="9">도봉구</button>
+        <button class="gu-btn" data-gu="10">동대문구</button>
+        <button class="gu-btn" data-gu="11">동작구</button>
+        <button class="gu-btn" data-gu="12">마포구</button>
+        <button class="gu-btn" data-gu="13">서대문구</button>
+        <button class="gu-btn" data-gu="14">서초구</button>
+        <button class="gu-btn" data-gu="15">성동구</button>
+        <button class="gu-btn" data-gu="16">성북구</button>
+        <button class="gu-btn" data-gu="17">송파구</button>
+        <button class="gu-btn" data-gu="18">양천구</button>
+        <button class="gu-btn" data-gu="19">영등포구</button>
+        <button class="gu-btn" data-gu="20">용산구</button>
+        <button class="gu-btn" data-gu="21">은평구</button>
+        <button class="gu-btn" data-gu="22">종로구</button>
+        <button class="gu-btn" data-gu="23">중구</button>
+        <button class="gu-btn" data-gu="24">중랑구</button>
+    </div>
+    <div class="reveal">
+      <div class="gu-panel on" data-panel="0">
+        <h3>강남구 카드단말기·포스기 설치</h3>
+        <p class="gu-desc">강남구 전역 당일 방문 설치 · 동 단위까지 매칭 가능합니다. 동네를 눌러 바로 전화 상담하세요.</p>
+        <div class="dong-wrap">
+          <a href="tel:01068321994" class="dong-chip" title="강남구 역삼동 카드단말기·포스기 설치 전화 상담">역삼동</a>
+          <a href="tel:01068321994" class="dong-chip" title="강남구 삼성동 카드단말기·포스기 설치 전화 상담">삼성동</a>
+          <a href="tel:01068321994" class="dong-chip" title="강남구 논현동 카드단말기·포스기 설치 전화 상담">논현동</a>
+          <a href="tel:01068321994" class="dong-chip" title="강남구 대치동 카드단말기·포스기 설치 전화 상담">대치동</a>
+          <a href="tel:01068321994" class="dong-chip" title="강남구 청담동 카드단말기·포스기 설치 전화 상담">청담동</a>
+          <a href="tel:01068321994" class="dong-chip" title="강남구 신사동 카드단말기·포스기 설치 전화 상담">신사동</a>
+          <a href="tel:01068321994" class="dong-chip" title="강남구 압구정동 카드단말기·포스기 설치 전화 상담">압구정동</a>
+          <a href="tel:01068321994" class="dong-chip" title="강남구 개포동 카드단말기·포스기 설치 전화 상담">개포동</a>
+          <a href="tel:01068321994" class="dong-chip" title="강남구 도곡동 카드단말기·포스기 설치 전화 상담">도곡동</a>
+          <a href="tel:01068321994" class="dong-chip" title="강남구 수서동 카드단말기·포스기 설치 전화 상담">수서동</a>
+          <a href="tel:01068321994" class="dong-chip" title="강남구 일원동 카드단말기·포스기 설치 전화 상담">일원동</a>
+          <a href="tel:01068321994" class="dong-chip" title="강남구 세곡동 카드단말기·포스기 설치 전화 상담">세곡동</a>
+        </div>
+      </div>
+      <div class="gu-panel" data-panel="1">
+        <h3>강동구 카드단말기·포스기 설치</h3>
+        <p class="gu-desc">강동구 전역 당일 방문 설치 · 동 단위까지 매칭 가능합니다. 동네를 눌러 바로 전화 상담하세요.</p>
+        <div class="dong-wrap">
+          <a href="tel:01068321994" class="dong-chip" title="강동구 천호동 카드단말기·포스기 설치 전화 상담">천호동</a>
+          <a href="tel:01068321994" class="dong-chip" title="강동구 성내동 카드단말기·포스기 설치 전화 상담">성내동</a>
+          <a href="tel:01068321994" class="dong-chip" title="강동구 길동 카드단말기·포스기 설치 전화 상담">길동</a>
+          <a href="tel:01068321994" class="dong-chip" title="강동구 둔촌동 카드단말기·포스기 설치 전화 상담">둔촌동</a>
+          <a href="tel:01068321994" class="dong-chip" title="강동구 암사동 카드단말기·포스기 설치 전화 상담">암사동</a>
+          <a href="tel:01068321994" class="dong-chip" title="강동구 명일동 카드단말기·포스기 설치 전화 상담">명일동</a>
+          <a href="tel:01068321994" class="dong-chip" title="강동구 고덕동 카드단말기·포스기 설치 전화 상담">고덕동</a>
+          <a href="tel:01068321994" class="dong-chip" title="강동구 상일동 카드단말기·포스기 설치 전화 상담">상일동</a>
+        </div>
+      </div>
+      <div class="gu-panel" data-panel="2">
+        <h3>강북구 카드단말기·포스기 설치</h3>
+        <p class="gu-desc">강북구 전역 당일 방문 설치 · 동 단위까지 매칭 가능합니다. 동네를 눌러 바로 전화 상담하세요.</p>
+        <div class="dong-wrap">
+          <a href="tel:01068321994" class="dong-chip" title="강북구 미아동 카드단말기·포스기 설치 전화 상담">미아동</a>
+          <a href="tel:01068321994" class="dong-chip" title="강북구 수유동 카드단말기·포스기 설치 전화 상담">수유동</a>
+          <a href="tel:01068321994" class="dong-chip" title="강북구 번동 카드단말기·포스기 설치 전화 상담">번동</a>
+          <a href="tel:01068321994" class="dong-chip" title="강북구 우이동 카드단말기·포스기 설치 전화 상담">우이동</a>
+        </div>
+      </div>
+      <div class="gu-panel" data-panel="3">
+        <h3>강서구 카드단말기·포스기 설치</h3>
+        <p class="gu-desc">강서구 전역 당일 방문 설치 · 동 단위까지 매칭 가능합니다. 동네를 눌러 바로 전화 상담하세요.</p>
+        <div class="dong-wrap">
+          <a href="tel:01068321994" class="dong-chip" title="강서구 화곡동 카드단말기·포스기 설치 전화 상담">화곡동</a>
+          <a href="tel:01068321994" class="dong-chip" title="강서구 등촌동 카드단말기·포스기 설치 전화 상담">등촌동</a>
+          <a href="tel:01068321994" class="dong-chip" title="강서구 가양동 카드단말기·포스기 설치 전화 상담">가양동</a>
+          <a href="tel:01068321994" class="dong-chip" title="강서구 발산동 카드단말기·포스기 설치 전화 상담">발산동</a>
+          <a href="tel:01068321994" class="dong-chip" title="강서구 염창동 카드단말기·포스기 설치 전화 상담">염창동</a>
+          <a href="tel:01068321994" class="dong-chip" title="강서구 방화동 카드단말기·포스기 설치 전화 상담">방화동</a>
+          <a href="tel:01068321994" class="dong-chip" title="강서구 마곡동 카드단말기·포스기 설치 전화 상담">마곡동</a>
+          <a href="tel:01068321994" class="dong-chip" title="강서구 공항동 카드단말기·포스기 설치 전화 상담">공항동</a>
+        </div>
+      </div>
+      <div class="gu-panel" data-panel="4">
+        <h3>관악구 카드단말기·포스기 설치</h3>
+        <p class="gu-desc">관악구 전역 당일 방문 설치 · 동 단위까지 매칭 가능합니다. 동네를 눌러 바로 전화 상담하세요.</p>
+        <div class="dong-wrap">
+          <a href="tel:01068321994" class="dong-chip" title="관악구 봉천동 카드단말기·포스기 설치 전화 상담">봉천동</a>
+          <a href="tel:01068321994" class="dong-chip" title="관악구 신림동 카드단말기·포스기 설치 전화 상담">신림동</a>
+          <a href="tel:01068321994" class="dong-chip" title="관악구 남현동 카드단말기·포스기 설치 전화 상담">남현동</a>
+          <a href="tel:01068321994" class="dong-chip" title="관악구 서울대입구 카드단말기·포스기 설치 전화 상담">서울대입구</a>
+        </div>
+      </div>
+      <div class="gu-panel" data-panel="5">
+        <h3>광진구 카드단말기·포스기 설치</h3>
+        <p class="gu-desc">광진구 전역 당일 방문 설치 · 동 단위까지 매칭 가능합니다. 동네를 눌러 바로 전화 상담하세요.</p>
+        <div class="dong-wrap">
+          <a href="tel:01068321994" class="dong-chip" title="광진구 자양동 카드단말기·포스기 설치 전화 상담">자양동</a>
+          <a href="tel:01068321994" class="dong-chip" title="광진구 구의동 카드단말기·포스기 설치 전화 상담">구의동</a>
+          <a href="tel:01068321994" class="dong-chip" title="광진구 광장동 카드단말기·포스기 설치 전화 상담">광장동</a>
+          <a href="tel:01068321994" class="dong-chip" title="광진구 화양동 카드단말기·포스기 설치 전화 상담">화양동</a>
+          <a href="tel:01068321994" class="dong-chip" title="광진구 군자동 카드단말기·포스기 설치 전화 상담">군자동</a>
+          <a href="tel:01068321994" class="dong-chip" title="광진구 중곡동 카드단말기·포스기 설치 전화 상담">중곡동</a>
+          <a href="tel:01068321994" class="dong-chip" title="광진구 능동 카드단말기·포스기 설치 전화 상담">능동</a>
+        </div>
+      </div>
+      <div class="gu-panel" data-panel="6">
+        <h3>구로구 카드단말기·포스기 설치</h3>
+        <p class="gu-desc">구로구 전역 당일 방문 설치 · 동 단위까지 매칭 가능합니다. 동네를 눌러 바로 전화 상담하세요.</p>
+        <div class="dong-wrap">
+          <a href="tel:01068321994" class="dong-chip" title="구로구 구로동 카드단말기·포스기 설치 전화 상담">구로동</a>
+          <a href="tel:01068321994" class="dong-chip" title="구로구 신도림동 카드단말기·포스기 설치 전화 상담">신도림동</a>
+          <a href="tel:01068321994" class="dong-chip" title="구로구 개봉동 카드단말기·포스기 설치 전화 상담">개봉동</a>
+          <a href="tel:01068321994" class="dong-chip" title="구로구 고척동 카드단말기·포스기 설치 전화 상담">고척동</a>
+          <a href="tel:01068321994" class="dong-chip" title="구로구 오류동 카드단말기·포스기 설치 전화 상담">오류동</a>
+          <a href="tel:01068321994" class="dong-chip" title="구로구 가리봉동 카드단말기·포스기 설치 전화 상담">가리봉동</a>
+          <a href="tel:01068321994" class="dong-chip" title="구로구 항동 카드단말기·포스기 설치 전화 상담">항동</a>
+        </div>
+      </div>
+      <div class="gu-panel" data-panel="7">
+        <h3>금천구 카드단말기·포스기 설치</h3>
+        <p class="gu-desc">금천구 전역 당일 방문 설치 · 동 단위까지 매칭 가능합니다. 동네를 눌러 바로 전화 상담하세요.</p>
+        <div class="dong-wrap">
+          <a href="tel:01068321994" class="dong-chip" title="금천구 가산동 카드단말기·포스기 설치 전화 상담">가산동</a>
+          <a href="tel:01068321994" class="dong-chip" title="금천구 독산동 카드단말기·포스기 설치 전화 상담">독산동</a>
+          <a href="tel:01068321994" class="dong-chip" title="금천구 시흥동 카드단말기·포스기 설치 전화 상담">시흥동</a>
+        </div>
+      </div>
+      <div class="gu-panel" data-panel="8">
+        <h3>노원구 카드단말기·포스기 설치</h3>
+        <p class="gu-desc">노원구 전역 당일 방문 설치 · 동 단위까지 매칭 가능합니다. 동네를 눌러 바로 전화 상담하세요.</p>
+        <div class="dong-wrap">
+          <a href="tel:01068321994" class="dong-chip" title="노원구 상계동 카드단말기·포스기 설치 전화 상담">상계동</a>
+          <a href="tel:01068321994" class="dong-chip" title="노원구 중계동 카드단말기·포스기 설치 전화 상담">중계동</a>
+          <a href="tel:01068321994" class="dong-chip" title="노원구 하계동 카드단말기·포스기 설치 전화 상담">하계동</a>
+          <a href="tel:01068321994" class="dong-chip" title="노원구 공릉동 카드단말기·포스기 설치 전화 상담">공릉동</a>
+          <a href="tel:01068321994" class="dong-chip" title="노원구 월계동 카드단말기·포스기 설치 전화 상담">월계동</a>
+        </div>
+      </div>
+      <div class="gu-panel" data-panel="9">
+        <h3>도봉구 카드단말기·포스기 설치</h3>
+        <p class="gu-desc">도봉구 전역 당일 방문 설치 · 동 단위까지 매칭 가능합니다. 동네를 눌러 바로 전화 상담하세요.</p>
+        <div class="dong-wrap">
+          <a href="tel:01068321994" class="dong-chip" title="도봉구 창동 카드단말기·포스기 설치 전화 상담">창동</a>
+          <a href="tel:01068321994" class="dong-chip" title="도봉구 방학동 카드단말기·포스기 설치 전화 상담">방학동</a>
+          <a href="tel:01068321994" class="dong-chip" title="도봉구 쌍문동 카드단말기·포스기 설치 전화 상담">쌍문동</a>
+          <a href="tel:01068321994" class="dong-chip" title="도봉구 도봉동 카드단말기·포스기 설치 전화 상담">도봉동</a>
+        </div>
+      </div>
+      <div class="gu-panel" data-panel="10">
+        <h3>동대문구 카드단말기·포스기 설치</h3>
+        <p class="gu-desc">동대문구 전역 당일 방문 설치 · 동 단위까지 매칭 가능합니다. 동네를 눌러 바로 전화 상담하세요.</p>
+        <div class="dong-wrap">
+          <a href="tel:01068321994" class="dong-chip" title="동대문구 전농동 카드단말기·포스기 설치 전화 상담">전농동</a>
+          <a href="tel:01068321994" class="dong-chip" title="동대문구 답십리동 카드단말기·포스기 설치 전화 상담">답십리동</a>
+          <a href="tel:01068321994" class="dong-chip" title="동대문구 장안동 카드단말기·포스기 설치 전화 상담">장안동</a>
+          <a href="tel:01068321994" class="dong-chip" title="동대문구 휘경동 카드단말기·포스기 설치 전화 상담">휘경동</a>
+          <a href="tel:01068321994" class="dong-chip" title="동대문구 이문동 카드단말기·포스기 설치 전화 상담">이문동</a>
+          <a href="tel:01068321994" class="dong-chip" title="동대문구 청량리동 카드단말기·포스기 설치 전화 상담">청량리동</a>
+          <a href="tel:01068321994" class="dong-chip" title="동대문구 제기동 카드단말기·포스기 설치 전화 상담">제기동</a>
+          <a href="tel:01068321994" class="dong-chip" title="동대문구 회기동 카드단말기·포스기 설치 전화 상담">회기동</a>
+        </div>
+      </div>
+      <div class="gu-panel" data-panel="11">
+        <h3>동작구 카드단말기·포스기 설치</h3>
+        <p class="gu-desc">동작구 전역 당일 방문 설치 · 동 단위까지 매칭 가능합니다. 동네를 눌러 바로 전화 상담하세요.</p>
+        <div class="dong-wrap">
+          <a href="tel:01068321994" class="dong-chip" title="동작구 노량진동 카드단말기·포스기 설치 전화 상담">노량진동</a>
+          <a href="tel:01068321994" class="dong-chip" title="동작구 상도동 카드단말기·포스기 설치 전화 상담">상도동</a>
+          <a href="tel:01068321994" class="dong-chip" title="동작구 사당동 카드단말기·포스기 설치 전화 상담">사당동</a>
+          <a href="tel:01068321994" class="dong-chip" title="동작구 흑석동 카드단말기·포스기 설치 전화 상담">흑석동</a>
+          <a href="tel:01068321994" class="dong-chip" title="동작구 대방동 카드단말기·포스기 설치 전화 상담">대방동</a>
+          <a href="tel:01068321994" class="dong-chip" title="동작구 신대방동 카드단말기·포스기 설치 전화 상담">신대방동</a>
+        </div>
+      </div>
+      <div class="gu-panel" data-panel="12">
+        <h3>마포구 카드단말기·포스기 설치</h3>
+        <p class="gu-desc">마포구 전역 당일 방문 설치 · 동 단위까지 매칭 가능합니다. 동네를 눌러 바로 전화 상담하세요.</p>
+        <div class="dong-wrap">
+          <a href="tel:01068321994" class="dong-chip" title="마포구 합정동 카드단말기·포스기 설치 전화 상담">합정동</a>
+          <a href="tel:01068321994" class="dong-chip" title="마포구 망원동 카드단말기·포스기 설치 전화 상담">망원동</a>
+          <a href="tel:01068321994" class="dong-chip" title="마포구 연남동 카드단말기·포스기 설치 전화 상담">연남동</a>
+          <a href="tel:01068321994" class="dong-chip" title="마포구 서교동 카드단말기·포스기 설치 전화 상담">서교동</a>
+          <a href="tel:01068321994" class="dong-chip" title="마포구 상암동 카드단말기·포스기 설치 전화 상담">상암동</a>
+          <a href="tel:01068321994" class="dong-chip" title="마포구 공덕동 카드단말기·포스기 설치 전화 상담">공덕동</a>
+          <a href="tel:01068321994" class="dong-chip" title="마포구 도화동 카드단말기·포스기 설치 전화 상담">도화동</a>
+          <a href="tel:01068321994" class="dong-chip" title="마포구 성산동 카드단말기·포스기 설치 전화 상담">성산동</a>
+        </div>
+      </div>
+      <div class="gu-panel" data-panel="13">
+        <h3>서대문구 카드단말기·포스기 설치</h3>
+        <p class="gu-desc">서대문구 전역 당일 방문 설치 · 동 단위까지 매칭 가능합니다. 동네를 눌러 바로 전화 상담하세요.</p>
+        <div class="dong-wrap">
+          <a href="tel:01068321994" class="dong-chip" title="서대문구 신촌동 카드단말기·포스기 설치 전화 상담">신촌동</a>
+          <a href="tel:01068321994" class="dong-chip" title="서대문구 홍은동 카드단말기·포스기 설치 전화 상담">홍은동</a>
+          <a href="tel:01068321994" class="dong-chip" title="서대문구 홍제동 카드단말기·포스기 설치 전화 상담">홍제동</a>
+          <a href="tel:01068321994" class="dong-chip" title="서대문구 연희동 카드단말기·포스기 설치 전화 상담">연희동</a>
+          <a href="tel:01068321994" class="dong-chip" title="서대문구 남가좌동 카드단말기·포스기 설치 전화 상담">남가좌동</a>
+          <a href="tel:01068321994" class="dong-chip" title="서대문구 북가좌동 카드단말기·포스기 설치 전화 상담">북가좌동</a>
+          <a href="tel:01068321994" class="dong-chip" title="서대문구 충정로 카드단말기·포스기 설치 전화 상담">충정로</a>
+        </div>
+      </div>
+      <div class="gu-panel" data-panel="14">
+        <h3>서초구 카드단말기·포스기 설치</h3>
+        <p class="gu-desc">서초구 전역 당일 방문 설치 · 동 단위까지 매칭 가능합니다. 동네를 눌러 바로 전화 상담하세요.</p>
+        <div class="dong-wrap">
+          <a href="tel:01068321994" class="dong-chip" title="서초구 서초동 카드단말기·포스기 설치 전화 상담">서초동</a>
+          <a href="tel:01068321994" class="dong-chip" title="서초구 반포동 카드단말기·포스기 설치 전화 상담">반포동</a>
+          <a href="tel:01068321994" class="dong-chip" title="서초구 잠원동 카드단말기·포스기 설치 전화 상담">잠원동</a>
+          <a href="tel:01068321994" class="dong-chip" title="서초구 방배동 카드단말기·포스기 설치 전화 상담">방배동</a>
+          <a href="tel:01068321994" class="dong-chip" title="서초구 양재동 카드단말기·포스기 설치 전화 상담">양재동</a>
+          <a href="tel:01068321994" class="dong-chip" title="서초구 내곡동 카드단말기·포스기 설치 전화 상담">내곡동</a>
+        </div>
+      </div>
+      <div class="gu-panel" data-panel="15">
+        <h3>성동구 카드단말기·포스기 설치</h3>
+        <p class="gu-desc">성동구 전역 당일 방문 설치 · 동 단위까지 매칭 가능합니다. 동네를 눌러 바로 전화 상담하세요.</p>
+        <div class="dong-wrap">
+          <a href="tel:01068321994" class="dong-chip" title="성동구 성수동 카드단말기·포스기 설치 전화 상담">성수동</a>
+          <a href="tel:01068321994" class="dong-chip" title="성동구 왕십리동 카드단말기·포스기 설치 전화 상담">왕십리동</a>
+          <a href="tel:01068321994" class="dong-chip" title="성동구 행당동 카드단말기·포스기 설치 전화 상담">행당동</a>
+          <a href="tel:01068321994" class="dong-chip" title="성동구 금호동 카드단말기·포스기 설치 전화 상담">금호동</a>
+          <a href="tel:01068321994" class="dong-chip" title="성동구 옥수동 카드단말기·포스기 설치 전화 상담">옥수동</a>
+          <a href="tel:01068321994" class="dong-chip" title="성동구 응봉동 카드단말기·포스기 설치 전화 상담">응봉동</a>
+          <a href="tel:01068321994" class="dong-chip" title="성동구 마장동 카드단말기·포스기 설치 전화 상담">마장동</a>
+        </div>
+      </div>
+      <div class="gu-panel" data-panel="16">
+        <h3>성북구 카드단말기·포스기 설치</h3>
+        <p class="gu-desc">성북구 전역 당일 방문 설치 · 동 단위까지 매칭 가능합니다. 동네를 눌러 바로 전화 상담하세요.</p>
+        <div class="dong-wrap">
+          <a href="tel:01068321994" class="dong-chip" title="성북구 성북동 카드단말기·포스기 설치 전화 상담">성북동</a>
+          <a href="tel:01068321994" class="dong-chip" title="성북구 안암동 카드단말기·포스기 설치 전화 상담">안암동</a>
+          <a href="tel:01068321994" class="dong-chip" title="성북구 정릉동 카드단말기·포스기 설치 전화 상담">정릉동</a>
+          <a href="tel:01068321994" class="dong-chip" title="성북구 길음동 카드단말기·포스기 설치 전화 상담">길음동</a>
+          <a href="tel:01068321994" class="dong-chip" title="성북구 돈암동 카드단말기·포스기 설치 전화 상담">돈암동</a>
+          <a href="tel:01068321994" class="dong-chip" title="성북구 장위동 카드단말기·포스기 설치 전화 상담">장위동</a>
+          <a href="tel:01068321994" class="dong-chip" title="성북구 석관동 카드단말기·포스기 설치 전화 상담">석관동</a>
+        </div>
+      </div>
+      <div class="gu-panel" data-panel="17">
+        <h3>송파구 카드단말기·포스기 설치</h3>
+        <p class="gu-desc">송파구 전역 당일 방문 설치 · 동 단위까지 매칭 가능합니다. 동네를 눌러 바로 전화 상담하세요.</p>
+        <div class="dong-wrap">
+          <a href="tel:01068321994" class="dong-chip" title="송파구 잠실동 카드단말기·포스기 설치 전화 상담">잠실동</a>
+          <a href="tel:01068321994" class="dong-chip" title="송파구 문정동 카드단말기·포스기 설치 전화 상담">문정동</a>
+          <a href="tel:01068321994" class="dong-chip" title="송파구 가락동 카드단말기·포스기 설치 전화 상담">가락동</a>
+          <a href="tel:01068321994" class="dong-chip" title="송파구 방이동 카드단말기·포스기 설치 전화 상담">방이동</a>
+          <a href="tel:01068321994" class="dong-chip" title="송파구 석촌동 카드단말기·포스기 설치 전화 상담">석촌동</a>
+          <a href="tel:01068321994" class="dong-chip" title="송파구 송파동 카드단말기·포스기 설치 전화 상담">송파동</a>
+          <a href="tel:01068321994" class="dong-chip" title="송파구 오금동 카드단말기·포스기 설치 전화 상담">오금동</a>
+          <a href="tel:01068321994" class="dong-chip" title="송파구 거여동 카드단말기·포스기 설치 전화 상담">거여동</a>
+          <a href="tel:01068321994" class="dong-chip" title="송파구 마천동 카드단말기·포스기 설치 전화 상담">마천동</a>
+          <a href="tel:01068321994" class="dong-chip" title="송파구 위례동 카드단말기·포스기 설치 전화 상담">위례동</a>
+        </div>
+      </div>
+      <div class="gu-panel" data-panel="18">
+        <h3>양천구 카드단말기·포스기 설치</h3>
+        <p class="gu-desc">양천구 전역 당일 방문 설치 · 동 단위까지 매칭 가능합니다. 동네를 눌러 바로 전화 상담하세요.</p>
+        <div class="dong-wrap">
+          <a href="tel:01068321994" class="dong-chip" title="양천구 목동 카드단말기·포스기 설치 전화 상담">목동</a>
+          <a href="tel:01068321994" class="dong-chip" title="양천구 신정동 카드단말기·포스기 설치 전화 상담">신정동</a>
+          <a href="tel:01068321994" class="dong-chip" title="양천구 신월동 카드단말기·포스기 설치 전화 상담">신월동</a>
+        </div>
+      </div>
+      <div class="gu-panel" data-panel="19">
+        <h3>영등포구 카드단말기·포스기 설치</h3>
+        <p class="gu-desc">영등포구 전역 당일 방문 설치 · 동 단위까지 매칭 가능합니다. 동네를 눌러 바로 전화 상담하세요.</p>
+        <div class="dong-wrap">
+          <a href="tel:01068321994" class="dong-chip" title="영등포구 여의도동 카드단말기·포스기 설치 전화 상담">여의도동</a>
+          <a href="tel:01068321994" class="dong-chip" title="영등포구 영등포동 카드단말기·포스기 설치 전화 상담">영등포동</a>
+          <a href="tel:01068321994" class="dong-chip" title="영등포구 당산동 카드단말기·포스기 설치 전화 상담">당산동</a>
+          <a href="tel:01068321994" class="dong-chip" title="영등포구 문래동 카드단말기·포스기 설치 전화 상담">문래동</a>
+          <a href="tel:01068321994" class="dong-chip" title="영등포구 양평동 카드단말기·포스기 설치 전화 상담">양평동</a>
+          <a href="tel:01068321994" class="dong-chip" title="영등포구 신길동 카드단말기·포스기 설치 전화 상담">신길동</a>
+          <a href="tel:01068321994" class="dong-chip" title="영등포구 대림동 카드단말기·포스기 설치 전화 상담">대림동</a>
+          <a href="tel:01068321994" class="dong-chip" title="영등포구 도림동 카드단말기·포스기 설치 전화 상담">도림동</a>
+        </div>
+      </div>
+      <div class="gu-panel" data-panel="20">
+        <h3>용산구 카드단말기·포스기 설치</h3>
+        <p class="gu-desc">용산구 전역 당일 방문 설치 · 동 단위까지 매칭 가능합니다. 동네를 눌러 바로 전화 상담하세요.</p>
+        <div class="dong-wrap">
+          <a href="tel:01068321994" class="dong-chip" title="용산구 이태원동 카드단말기·포스기 설치 전화 상담">이태원동</a>
+          <a href="tel:01068321994" class="dong-chip" title="용산구 한남동 카드단말기·포스기 설치 전화 상담">한남동</a>
+          <a href="tel:01068321994" class="dong-chip" title="용산구 용산동 카드단말기·포스기 설치 전화 상담">용산동</a>
+          <a href="tel:01068321994" class="dong-chip" title="용산구 청파동 카드단말기·포스기 설치 전화 상담">청파동</a>
+          <a href="tel:01068321994" class="dong-chip" title="용산구 효창동 카드단말기·포스기 설치 전화 상담">효창동</a>
+          <a href="tel:01068321994" class="dong-chip" title="용산구 후암동 카드단말기·포스기 설치 전화 상담">후암동</a>
+          <a href="tel:01068321994" class="dong-chip" title="용산구 보광동 카드단말기·포스기 설치 전화 상담">보광동</a>
+          <a href="tel:01068321994" class="dong-chip" title="용산구 원효로 카드단말기·포스기 설치 전화 상담">원효로</a>
+        </div>
+      </div>
+      <div class="gu-panel" data-panel="21">
+        <h3>은평구 카드단말기·포스기 설치</h3>
+        <p class="gu-desc">은평구 전역 당일 방문 설치 · 동 단위까지 매칭 가능합니다. 동네를 눌러 바로 전화 상담하세요.</p>
+        <div class="dong-wrap">
+          <a href="tel:01068321994" class="dong-chip" title="은평구 응암동 카드단말기·포스기 설치 전화 상담">응암동</a>
+          <a href="tel:01068321994" class="dong-chip" title="은평구 불광동 카드단말기·포스기 설치 전화 상담">불광동</a>
+          <a href="tel:01068321994" class="dong-chip" title="은평구 갈현동 카드단말기·포스기 설치 전화 상담">갈현동</a>
+          <a href="tel:01068321994" class="dong-chip" title="은평구 연신내 카드단말기·포스기 설치 전화 상담">연신내</a>
+          <a href="tel:01068321994" class="dong-chip" title="은평구 녹번동 카드단말기·포스기 설치 전화 상담">녹번동</a>
+          <a href="tel:01068321994" class="dong-chip" title="은평구 대조동 카드단말기·포스기 설치 전화 상담">대조동</a>
+          <a href="tel:01068321994" class="dong-chip" title="은평구 구산동 카드단말기·포스기 설치 전화 상담">구산동</a>
+          <a href="tel:01068321994" class="dong-chip" title="은평구 수색동 카드단말기·포스기 설치 전화 상담">수색동</a>
+        </div>
+      </div>
+      <div class="gu-panel" data-panel="22">
+        <h3>종로구 카드단말기·포스기 설치</h3>
+        <p class="gu-desc">종로구 전역 당일 방문 설치 · 동 단위까지 매칭 가능합니다. 동네를 눌러 바로 전화 상담하세요.</p>
+        <div class="dong-wrap">
+          <a href="tel:01068321994" class="dong-chip" title="종로구 종로 카드단말기·포스기 설치 전화 상담">종로</a>
+          <a href="tel:01068321994" class="dong-chip" title="종로구 인사동 카드단말기·포스기 설치 전화 상담">인사동</a>
+          <a href="tel:01068321994" class="dong-chip" title="종로구 혜화동 카드단말기·포스기 설치 전화 상담">혜화동</a>
+          <a href="tel:01068321994" class="dong-chip" title="종로구 평창동 카드단말기·포스기 설치 전화 상담">평창동</a>
+          <a href="tel:01068321994" class="dong-chip" title="종로구 부암동 카드단말기·포스기 설치 전화 상담">부암동</a>
+          <a href="tel:01068321994" class="dong-chip" title="종로구 삼청동 카드단말기·포스기 설치 전화 상담">삼청동</a>
+          <a href="tel:01068321994" class="dong-chip" title="종로구 명륜동 카드단말기·포스기 설치 전화 상담">명륜동</a>
+          <a href="tel:01068321994" class="dong-chip" title="종로구 창신동 카드단말기·포스기 설치 전화 상담">창신동</a>
+        </div>
+      </div>
+      <div class="gu-panel" data-panel="23">
+        <h3>중구 카드단말기·포스기 설치</h3>
+        <p class="gu-desc">중구 전역 당일 방문 설치 · 동 단위까지 매칭 가능합니다. 동네를 눌러 바로 전화 상담하세요.</p>
+        <div class="dong-wrap">
+          <a href="tel:01068321994" class="dong-chip" title="중구 명동 카드단말기·포스기 설치 전화 상담">명동</a>
+          <a href="tel:01068321994" class="dong-chip" title="중구 을지로 카드단말기·포스기 설치 전화 상담">을지로</a>
+          <a href="tel:01068321994" class="dong-chip" title="중구 충무로 카드단말기·포스기 설치 전화 상담">충무로</a>
+          <a href="tel:01068321994" class="dong-chip" title="중구 신당동 카드단말기·포스기 설치 전화 상담">신당동</a>
+          <a href="tel:01068321994" class="dong-chip" title="중구 황학동 카드단말기·포스기 설치 전화 상담">황학동</a>
+          <a href="tel:01068321994" class="dong-chip" title="중구 회현동 카드단말기·포스기 설치 전화 상담">회현동</a>
+          <a href="tel:01068321994" class="dong-chip" title="중구 광희동 카드단말기·포스기 설치 전화 상담">광희동</a>
+        </div>
+      </div>
+      <div class="gu-panel" data-panel="24">
+        <h3>중랑구 카드단말기·포스기 설치</h3>
+        <p class="gu-desc">중랑구 전역 당일 방문 설치 · 동 단위까지 매칭 가능합니다. 동네를 눌러 바로 전화 상담하세요.</p>
+        <div class="dong-wrap">
+          <a href="tel:01068321994" class="dong-chip" title="중랑구 면목동 카드단말기·포스기 설치 전화 상담">면목동</a>
+          <a href="tel:01068321994" class="dong-chip" title="중랑구 상봉동 카드단말기·포스기 설치 전화 상담">상봉동</a>
+          <a href="tel:01068321994" class="dong-chip" title="중랑구 중화동 카드단말기·포스기 설치 전화 상담">중화동</a>
+          <a href="tel:01068321994" class="dong-chip" title="중랑구 묵동 카드단말기·포스기 설치 전화 상담">묵동</a>
+          <a href="tel:01068321994" class="dong-chip" title="중랑구 망우동 카드단말기·포스기 설치 전화 상담">망우동</a>
+          <a href="tel:01068321994" class="dong-chip" title="중랑구 신내동 카드단말기·포스기 설치 전화 상담">신내동</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block info">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">Service Info</span>
+      <h2>서울 전역 서비스 안내</h2>
+      <p>신청 즉시 가까운 담당 기사 배정 · 당일~익일 방문 설치</p>
+    </div>
+    <div class="info-grid">
+      <div class="info-box reveal">
+        <h3>🗺️ 서비스 지역 · 운영</h3>
+        <div class="kv"><div class="k">설치 지역</div><div class="v">서울특별시 25개 자치구 전역 (동 단위 방문)</div></div>
+        <div class="kv"><div class="k">운영 시간</div><div class="v">평일·주말 09:00 ~ 21:00</div></div>
+        <div class="kv"><div class="k">설치 소요</div><div class="v">상담 후 당일~익일 설치</div></div>
+        <div class="kv"><div class="k">A/S</div><div class="v">24시간 장애 접수 · 무상 점검</div></div>
+        <div style="margin-top:16px">
+          <div class="k" style="font-size:.8rem;color:var(--muted);font-weight:700;margin-bottom:8px">제휴 카드·결제사</div>
+          <div class="tags-line">
+            <span class="tg">신한</span><span class="tg">삼성</span><span class="tg">현대</span><span class="tg">국민</span><span class="tg">롯데</span><span class="tg">하나</span><span class="tg">우리</span><span class="tg">BC</span><span class="tg">카카오페이</span><span class="tg">네이버페이</span><span class="tg">제로페이</span>
+          </div>
+        </div>
+      </div>
+      <div class="info-box reveal">
+        <h3>💳 취급 단말기 · 결제 수단</h3>
+        <table class="tbl">
+          <tr><th>단말기</th><th>지원 결제</th></tr>
+          <tr><td>유선 카드단말기</td><td>카드 · 삼성페이 · QR</td></tr>
+          <tr><td>무선·휴대 단말기</td><td>배달 · 출장 · 푸드트럭</td></tr>
+          <tr><td>포스(POS)</td><td>매출·재고·직원 통합 관리</td></tr>
+          <tr><td>키오스크</td><td>무인 주문 · 선결제</td></tr>
+        </table>
+        <p style="font-size:.82rem;color:var(--muted);margin-top:12px">※ 업종·매장 규모에 맞춰 최적 단말기를 추천해 드립니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="why">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">Why PayBridge</span>
+      <h2>왜 페이브릿지일까요?</h2>
+      <p>단말기만 파는 곳이 아닙니다. 설치부터 정산, AS까지 끝까지 책임집니다.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why reveal"><div class="ico">⚡</div><div class="fno">POINT 01</div><h3>당일 설치</h3><p>오전 상담 시 당일 방문 설치. 영업 공백 없이 바로 결제를 시작하세요.</p></div>
+      <div class="why reveal"><div class="ico">💰</div><div class="fno">POINT 02</div><h3>업계 최저 수수료</h3><p>영세·중소 가맹점 우대 수수료를 정확히 적용해 매달 비용을 줄여드립니다.</p></div>
+      <div class="why reveal"><div class="ico">🎁</div><div class="fno">POINT 03</div><h3>설치비 0원</h3><p>초기 설치비·가맹 대행 수수료 없이, 단말기 설치까지 전액 무료입니다.</p></div>
+      <div class="why reveal"><div class="ico">🛠️</div><div class="fno">POINT 04</div><h3>24시간 AS</h3><p>결제 장애는 매출 손실입니다. 24시간 접수로 가장 빠르게 복구합니다.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="block ind" id="industries">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">By Industry</span>
+      <h2>업종에 딱 맞는 결제 솔루션</h2>
+      <p>매장 형태에 따라 필요한 단말기와 기능이 다릅니다. 업종별로 최적 구성을 제안합니다.</p>
+    </div>
+    <div class="ind-grid">
+      <div class="ind-card reveal">
+        <div class="top"><div class="ic">🍽️</div><div><h3>요식업·주점</h3><div class="sub">테이블 회전·주문 관리</div></div></div>
+        <ul>
+          <li><b>테이블 오더 연동</b> 포스로 주문·결제·매출을 한 번에 관리</li>
+          <li><b>배달앱 통합 정산</b> 배민·쿠팡이츠 매출까지 한 화면에서</li>
+          <li><b>영수증·세금계산서</b> 자동 발행으로 마감 시간 단축</li>
+        </ul>
+      </div>
+      <div class="ind-card reveal">
+        <div class="top"><div class="ic">☕</div><div><h3>카페·베이커리</h3><div class="sub">빠른 결제·적립</div></div></div>
+        <ul>
+          <li><b>간편결제 일괄 지원</b> 카카오·네이버페이·QR 한 대로</li>
+          <li><b>멤버십·쿠폰 적립</b> 단골 관리로 재방문율 상승</li>
+          <li><b>소형 단말기</b> 좁은 카운터에 맞는 슬림 설계</li>
+        </ul>
+      </div>
+      <div class="ind-card reveal">
+        <div class="top"><div class="ic">🛒</div><div><h3>소매·편의점</h3><div class="sub">재고·바코드 관리</div></div></div>
+        <ul>
+          <li><b>바코드 스캔 포스</b> 상품 등록·재고를 실시간 관리</li>
+          <li><b>다회선 결제</b> 피크타임에도 빠른 계산 처리</li>
+          <li><b>매출 리포트</b> 시간대별 매출 분석 자동 제공</li>
+        </ul>
+      </div>
+      <div class="ind-card reveal">
+        <div class="top"><div class="ic">🤖</div><div><h3>무인·키오스크 매장</h3><div class="sub">셀프 주문·결제</div></div></div>
+        <ul>
+          <li><b>키오스크 설치</b> 인건비 절감과 비대면 주문 동시에</li>
+          <li><b>원격 모니터링</b> 매장 밖에서도 매출·장애 확인</li>
+          <li><b>24시간 무인 운영</b> 야간·새벽 무인 결제 안정 지원</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="apply">
+  <div class="wrap apply-wrap">
+    <div class="apply-copy reveal">
+      <span class="eyebrow">Free Consultation</span>
+      <h2>전화 한 통이면 끝나는<br>무료 설치 상담</h2>
+      <p>전화 주시면 담당 매니저가 업종에 맞는 단말기와 카드 수수료를 바로 안내해 드립니다. 복잡한 가입 절차 없이 통화로 끝냅니다.</p>
+      <div class="biglist">
+        <div><span class="c">①</span> 전화 상담 (1분)</div>
+        <div><span class="c">②</span> 맞춤 단말기·수수료 안내</div>
+        <div><span class="c">③</span> 당일~익일 방문 설치</div>
+      </div>
+    </div>
+    <div class="form-card reveal" style="text-align:center">
+      <div style="font-size:.78rem;font-weight:800;letter-spacing:.12em;color:var(--brand);text-transform:uppercase;margin-bottom:14px">지금 바로 전화하세요</div>
+      <a href="tel:01068321994" style="display:block;font-size:2.1rem;font-weight:800;color:var(--ink);margin-bottom:6px">📞 010-6832-1994</a>
+      <p class="sub" style="margin-bottom:22px">평일·주말 09:00 ~ 21:00 · 상담 완전 무료</p>
+      <a href="tel:01068321994" class="btn btn-primary" style="width:100%">전화로 상담하기 →</a>
+      <p class="form-note">✓ 설치비 0원 · ✓ 가맹 수수료 무료 · ✓ 24시간 AS</p>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="pricing" style="background:var(--bg)">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">Pricing</span>
+      <h2>투명한 요금 안내</h2>
+      <p>숨은 비용 없이 — 설치비와 가맹 대행 수수료는 받지 않습니다.</p>
+    </div>
+    <div class="reveal">
+      <table class="price-tbl">
+        <thead><tr><th>구분</th><th>설치비</th><th>월 이용료</th><th>카드 수수료(영세)</th></tr></thead>
+        <tbody>
+          <tr><td>카드단말기</td><td class="hl">0원</td><td>0원~</td><td>0.5%~</td></tr>
+          <tr><td>포스(POS)</td><td class="hl">0원</td><td>월 렌탈 협의</td><td>0.5%~</td></tr>
+          <tr><td>키오스크</td><td class="hl">0원</td><td>월 렌탈 협의</td><td>0.5%~</td></tr>
+        </tbody>
+      </table>
+      <p class="price-note">※ 카드 수수료는 가맹점 매출 규모(영세·중소·일반)에 따라 차등 적용됩니다. 정확한 요금은 상담 시 안내드립니다.</p>
+    </div>
+  </div>
+</section>
+
+<section class="block seo">
+  <div class="wrap reveal">
+    <h2>서울 전 지역 카드단말기·포스기 설치, 페이브릿지</h2>
+    <p class="intro">페이브릿지는 서울특별시 25개 자치구 전역에서 카드단말기·포스기·키오스크 설치를 진행하는 전문 업체입니다. 강남구, 서초구, 송파구, 마포구, 영등포구 등 서울 모든 자치구의 동 단위까지 당일 방문 설치하며, 신규 창업 매장 설치부터 단말기 교체, 모든 카드사 일괄 가맹까지 한 번에 처리합니다. 아래에서 우리 지역을 확인해 보세요.</p>
+      <div class="seo-gu">
+        <h4>강남구</h4>
+        <div class="kw"><span>강남구 카드단말기</span><span>강남구 포스기</span><span>강남구 포스 설치</span><span>강남구 키오스크 설치</span><span>역삼동 카드단말기</span><span>삼성동 카드단말기</span><span>논현동 카드단말기</span><span>대치동 카드단말기</span><span>청담동 카드단말기</span><span>신사동 카드단말기</span><span>압구정동 카드단말기</span><span>개포동 카드단말기</span><span>도곡동 카드단말기</span><span>수서동 카드단말기</span><span>일원동 카드단말기</span><span>세곡동 카드단말기</span><span>역삼동 포스기</span><span>삼성동 포스기</span><span>논현동 포스기</span><span>대치동 포스기</span><span>청담동 포스기</span><span>신사동 포스기</span><span>압구정동 포스기</span><span>개포동 포스기</span><span>도곡동 포스기</span><span>수서동 포스기</span><span>일원동 포스기</span><span>세곡동 포스기</span></div>
+      </div>
+      <div class="seo-gu">
+        <h4>강동구</h4>
+        <div class="kw"><span>강동구 카드단말기</span><span>강동구 포스기</span><span>강동구 포스 설치</span><span>강동구 키오스크 설치</span><span>천호동 카드단말기</span><span>성내동 카드단말기</span><span>길동 카드단말기</span><span>둔촌동 카드단말기</span><span>암사동 카드단말기</span><span>명일동 카드단말기</span><span>고덕동 카드단말기</span><span>상일동 카드단말기</span><span>천호동 포스기</span><span>성내동 포스기</span><span>길동 포스기</span><span>둔촌동 포스기</span><span>암사동 포스기</span><span>명일동 포스기</span><span>고덕동 포스기</span><span>상일동 포스기</span></div>
+      </div>
+      <div class="seo-gu">
+        <h4>강북구</h4>
+        <div class="kw"><span>강북구 카드단말기</span><span>강북구 포스기</span><span>강북구 포스 설치</span><span>강북구 키오스크 설치</span><span>미아동 카드단말기</span><span>수유동 카드단말기</span><span>번동 카드단말기</span><span>우이동 카드단말기</span><span>미아동 포스기</span><span>수유동 포스기</span><span>번동 포스기</span><span>우이동 포스기</span></div>
+      </div>
+      <div class="seo-gu">
+        <h4>강서구</h4>
+        <div class="kw"><span>강서구 카드단말기</span><span>강서구 포스기</span><span>강서구 포스 설치</span><span>강서구 키오스크 설치</span><span>화곡동 카드단말기</span><span>등촌동 카드단말기</span><span>가양동 카드단말기</span><span>발산동 카드단말기</span><span>염창동 카드단말기</span><span>방화동 카드단말기</span><span>마곡동 카드단말기</span><span>공항동 카드단말기</span><span>화곡동 포스기</span><span>등촌동 포스기</span><span>가양동 포스기</span><span>발산동 포스기</span><span>염창동 포스기</span><span>방화동 포스기</span><span>마곡동 포스기</span><span>공항동 포스기</span></div>
+      </div>
+      <div class="seo-gu">
+        <h4>관악구</h4>
+        <div class="kw"><span>관악구 카드단말기</span><span>관악구 포스기</span><span>관악구 포스 설치</span><span>관악구 키오스크 설치</span><span>봉천동 카드단말기</span><span>신림동 카드단말기</span><span>남현동 카드단말기</span><span>서울대입구 카드단말기</span><span>봉천동 포스기</span><span>신림동 포스기</span><span>남현동 포스기</span><span>서울대입구 포스기</span></div>
+      </div>
+      <div class="seo-gu">
+        <h4>광진구</h4>
+        <div class="kw"><span>광진구 카드단말기</span><span>광진구 포스기</span><span>광진구 포스 설치</span><span>광진구 키오스크 설치</span><span>자양동 카드단말기</span><span>구의동 카드단말기</span><span>광장동 카드단말기</span><span>화양동 카드단말기</span><span>군자동 카드단말기</span><span>중곡동 카드단말기</span><span>능동 카드단말기</span><span>자양동 포스기</span><span>구의동 포스기</span><span>광장동 포스기</span><span>화양동 포스기</span><span>군자동 포스기</span><span>중곡동 포스기</span><span>능동 포스기</span></div>
+      </div>
+      <div class="seo-gu">
+        <h4>구로구</h4>
+        <div class="kw"><span>구로구 카드단말기</span><span>구로구 포스기</span><span>구로구 포스 설치</span><span>구로구 키오스크 설치</span><span>구로동 카드단말기</span><span>신도림동 카드단말기</span><span>개봉동 카드단말기</span><span>고척동 카드단말기</span><span>오류동 카드단말기</span><span>가리봉동 카드단말기</span><span>항동 카드단말기</span><span>구로동 포스기</span><span>신도림동 포스기</span><span>개봉동 포스기</span><span>고척동 포스기</span><span>오류동 포스기</span><span>가리봉동 포스기</span><span>항동 포스기</span></div>
+      </div>
+      <div class="seo-gu">
+        <h4>금천구</h4>
+        <div class="kw"><span>금천구 카드단말기</span><span>금천구 포스기</span><span>금천구 포스 설치</span><span>금천구 키오스크 설치</span><span>가산동 카드단말기</span><span>독산동 카드단말기</span><span>시흥동 카드단말기</span><span>가산동 포스기</span><span>독산동 포스기</span><span>시흥동 포스기</span></div>
+      </div>
+      <div class="seo-gu">
+        <h4>노원구</h4>
+        <div class="kw"><span>노원구 카드단말기</span><span>노원구 포스기</span><span>노원구 포스 설치</span><span>노원구 키오스크 설치</span><span>상계동 카드단말기</span><span>중계동 카드단말기</span><span>하계동 카드단말기</span><span>공릉동 카드단말기</span><span>월계동 카드단말기</span><span>상계동 포스기</span><span>중계동 포스기</span><span>하계동 포스기</span><span>공릉동 포스기</span><span>월계동 포스기</span></div>
+      </div>
+      <div class="seo-gu">
+        <h4>도봉구</h4>
+        <div class="kw"><span>도봉구 카드단말기</span><span>도봉구 포스기</span><span>도봉구 포스 설치</span><span>도봉구 키오스크 설치</span><span>창동 카드단말기</span><span>방학동 카드단말기</span><span>쌍문동 카드단말기</span><span>도봉동 카드단말기</span><span>창동 포스기</span><span>방학동 포스기</span><span>쌍문동 포스기</span><span>도봉동 포스기</span></div>
+      </div>
+      <div class="seo-gu">
+        <h4>동대문구</h4>
+        <div class="kw"><span>동대문구 카드단말기</span><span>동대문구 포스기</span><span>동대문구 포스 설치</span><span>동대문구 키오스크 설치</span><span>전농동 카드단말기</span><span>답십리동 카드단말기</span><span>장안동 카드단말기</span><span>휘경동 카드단말기</span><span>이문동 카드단말기</span><span>청량리동 카드단말기</span><span>제기동 카드단말기</span><span>회기동 카드단말기</span><span>전농동 포스기</span><span>답십리동 포스기</span><span>장안동 포스기</span><span>휘경동 포스기</span><span>이문동 포스기</span><span>청량리동 포스기</span><span>제기동 포스기</span><span>회기동 포스기</span></div>
+      </div>
+      <div class="seo-gu">
+        <h4>동작구</h4>
+        <div class="kw"><span>동작구 카드단말기</span><span>동작구 포스기</span><span>동작구 포스 설치</span><span>동작구 키오스크 설치</span><span>노량진동 카드단말기</span><span>상도동 카드단말기</span><span>사당동 카드단말기</span><span>흑석동 카드단말기</span><span>대방동 카드단말기</span><span>신대방동 카드단말기</span><span>노량진동 포스기</span><span>상도동 포스기</span><span>사당동 포스기</span><span>흑석동 포스기</span><span>대방동 포스기</span><span>신대방동 포스기</span></div>
+      </div>
+      <div class="seo-gu">
+        <h4>마포구</h4>
+        <div class="kw"><span>마포구 카드단말기</span><span>마포구 포스기</span><span>마포구 포스 설치</span><span>마포구 키오스크 설치</span><span>합정동 카드단말기</span><span>망원동 카드단말기</span><span>연남동 카드단말기</span><span>서교동 카드단말기</span><span>상암동 카드단말기</span><span>공덕동 카드단말기</span><span>도화동 카드단말기</span><span>성산동 카드단말기</span><span>합정동 포스기</span><span>망원동 포스기</span><span>연남동 포스기</span><span>서교동 포스기</span><span>상암동 포스기</span><span>공덕동 포스기</span><span>도화동 포스기</span><span>성산동 포스기</span></div>
+      </div>
+      <div class="seo-gu">
+        <h4>서대문구</h4>
+        <div class="kw"><span>서대문구 카드단말기</span><span>서대문구 포스기</span><span>서대문구 포스 설치</span><span>서대문구 키오스크 설치</span><span>신촌동 카드단말기</span><span>홍은동 카드단말기</span><span>홍제동 카드단말기</span><span>연희동 카드단말기</span><span>남가좌동 카드단말기</span><span>북가좌동 카드단말기</span><span>충정로 카드단말기</span><span>신촌동 포스기</span><span>홍은동 포스기</span><span>홍제동 포스기</span><span>연희동 포스기</span><span>남가좌동 포스기</span><span>북가좌동 포스기</span><span>충정로 포스기</span></div>
+      </div>
+      <div class="seo-gu">
+        <h4>서초구</h4>
+        <div class="kw"><span>서초구 카드단말기</span><span>서초구 포스기</span><span>서초구 포스 설치</span><span>서초구 키오스크 설치</span><span>서초동 카드단말기</span><span>반포동 카드단말기</span><span>잠원동 카드단말기</span><span>방배동 카드단말기</span><span>양재동 카드단말기</span><span>내곡동 카드단말기</span><span>서초동 포스기</span><span>반포동 포스기</span><span>잠원동 포스기</span><span>방배동 포스기</span><span>양재동 포스기</span><span>내곡동 포스기</span></div>
+      </div>
+      <div class="seo-gu">
+        <h4>성동구</h4>
+        <div class="kw"><span>성동구 카드단말기</span><span>성동구 포스기</span><span>성동구 포스 설치</span><span>성동구 키오스크 설치</span><span>성수동 카드단말기</span><span>왕십리동 카드단말기</span><span>행당동 카드단말기</span><span>금호동 카드단말기</span><span>옥수동 카드단말기</span><span>응봉동 카드단말기</span><span>마장동 카드단말기</span><span>성수동 포스기</span><span>왕십리동 포스기</span><span>행당동 포스기</span><span>금호동 포스기</span><span>옥수동 포스기</span><span>응봉동 포스기</span><span>마장동 포스기</span></div>
+      </div>
+      <div class="seo-gu">
+        <h4>성북구</h4>
+        <div class="kw"><span>성북구 카드단말기</span><span>성북구 포스기</span><span>성북구 포스 설치</span><span>성북구 키오스크 설치</span><span>성북동 카드단말기</span><span>안암동 카드단말기</span><span>정릉동 카드단말기</span><span>길음동 카드단말기</span><span>돈암동 카드단말기</span><span>장위동 카드단말기</span><span>석관동 카드단말기</span><span>성북동 포스기</span><span>안암동 포스기</span><span>정릉동 포스기</span><span>길음동 포스기</span><span>돈암동 포스기</span><span>장위동 포스기</span><span>석관동 포스기</span></div>
+      </div>
+      <div class="seo-gu">
+        <h4>송파구</h4>
+        <div class="kw"><span>송파구 카드단말기</span><span>송파구 포스기</span><span>송파구 포스 설치</span><span>송파구 키오스크 설치</span><span>잠실동 카드단말기</span><span>문정동 카드단말기</span><span>가락동 카드단말기</span><span>방이동 카드단말기</span><span>석촌동 카드단말기</span><span>송파동 카드단말기</span><span>오금동 카드단말기</span><span>거여동 카드단말기</span><span>마천동 카드단말기</span><span>위례동 카드단말기</span><span>잠실동 포스기</span><span>문정동 포스기</span><span>가락동 포스기</span><span>방이동 포스기</span><span>석촌동 포스기</span><span>송파동 포스기</span><span>오금동 포스기</span><span>거여동 포스기</span><span>마천동 포스기</span><span>위례동 포스기</span></div>
+      </div>
+      <div class="seo-gu">
+        <h4>양천구</h4>
+        <div class="kw"><span>양천구 카드단말기</span><span>양천구 포스기</span><span>양천구 포스 설치</span><span>양천구 키오스크 설치</span><span>목동 카드단말기</span><span>신정동 카드단말기</span><span>신월동 카드단말기</span><span>목동 포스기</span><span>신정동 포스기</span><span>신월동 포스기</span></div>
+      </div>
+      <div class="seo-gu">
+        <h4>영등포구</h4>
+        <div class="kw"><span>영등포구 카드단말기</span><span>영등포구 포스기</span><span>영등포구 포스 설치</span><span>영등포구 키오스크 설치</span><span>여의도동 카드단말기</span><span>영등포동 카드단말기</span><span>당산동 카드단말기</span><span>문래동 카드단말기</span><span>양평동 카드단말기</span><span>신길동 카드단말기</span><span>대림동 카드단말기</span><span>도림동 카드단말기</span><span>여의도동 포스기</span><span>영등포동 포스기</span><span>당산동 포스기</span><span>문래동 포스기</span><span>양평동 포스기</span><span>신길동 포스기</span><span>대림동 포스기</span><span>도림동 포스기</span></div>
+      </div>
+      <div class="seo-gu">
+        <h4>용산구</h4>
+        <div class="kw"><span>용산구 카드단말기</span><span>용산구 포스기</span><span>용산구 포스 설치</span><span>용산구 키오스크 설치</span><span>이태원동 카드단말기</span><span>한남동 카드단말기</span><span>용산동 카드단말기</span><span>청파동 카드단말기</span><span>효창동 카드단말기</span><span>후암동 카드단말기</span><span>보광동 카드단말기</span><span>원효로 카드단말기</span><span>이태원동 포스기</span><span>한남동 포스기</span><span>용산동 포스기</span><span>청파동 포스기</span><span>효창동 포스기</span><span>후암동 포스기</span><span>보광동 포스기</span><span>원효로 포스기</span></div>
+      </div>
+      <div class="seo-gu">
+        <h4>은평구</h4>
+        <div class="kw"><span>은평구 카드단말기</span><span>은평구 포스기</span><span>은평구 포스 설치</span><span>은평구 키오스크 설치</span><span>응암동 카드단말기</span><span>불광동 카드단말기</span><span>갈현동 카드단말기</span><span>연신내 카드단말기</span><span>녹번동 카드단말기</span><span>대조동 카드단말기</span><span>구산동 카드단말기</span><span>수색동 카드단말기</span><span>응암동 포스기</span><span>불광동 포스기</span><span>갈현동 포스기</span><span>연신내 포스기</span><span>녹번동 포스기</span><span>대조동 포스기</span><span>구산동 포스기</span><span>수색동 포스기</span></div>
+      </div>
+      <div class="seo-gu">
+        <h4>종로구</h4>
+        <div class="kw"><span>종로구 카드단말기</span><span>종로구 포스기</span><span>종로구 포스 설치</span><span>종로구 키오스크 설치</span><span>종로 카드단말기</span><span>인사동 카드단말기</span><span>혜화동 카드단말기</span><span>평창동 카드단말기</span><span>부암동 카드단말기</span><span>삼청동 카드단말기</span><span>명륜동 카드단말기</span><span>창신동 카드단말기</span><span>종로 포스기</span><span>인사동 포스기</span><span>혜화동 포스기</span><span>평창동 포스기</span><span>부암동 포스기</span><span>삼청동 포스기</span><span>명륜동 포스기</span><span>창신동 포스기</span></div>
+      </div>
+      <div class="seo-gu">
+        <h4>중구</h4>
+        <div class="kw"><span>중구 카드단말기</span><span>중구 포스기</span><span>중구 포스 설치</span><span>중구 키오스크 설치</span><span>명동 카드단말기</span><span>을지로 카드단말기</span><span>충무로 카드단말기</span><span>신당동 카드단말기</span><span>황학동 카드단말기</span><span>회현동 카드단말기</span><span>광희동 카드단말기</span><span>명동 포스기</span><span>을지로 포스기</span><span>충무로 포스기</span><span>신당동 포스기</span><span>황학동 포스기</span><span>회현동 포스기</span><span>광희동 포스기</span></div>
+      </div>
+      <div class="seo-gu">
+        <h4>중랑구</h4>
+        <div class="kw"><span>중랑구 카드단말기</span><span>중랑구 포스기</span><span>중랑구 포스 설치</span><span>중랑구 키오스크 설치</span><span>면목동 카드단말기</span><span>상봉동 카드단말기</span><span>중화동 카드단말기</span><span>묵동 카드단말기</span><span>망우동 카드단말기</span><span>신내동 카드단말기</span><span>면목동 포스기</span><span>상봉동 포스기</span><span>중화동 포스기</span><span>묵동 포스기</span><span>망우동 포스기</span><span>신내동 포스기</span></div>
+      </div>
+  </div>
+</section>
+
+<section class="block bizseo" id="industries-list">
+  <div class="wrap reveal">
+    <div class="head" style="margin-bottom:38px">
+      <span class="eyebrow">Industries We Serve</span>
+      <h2>이러한 업종의 설치를 도와드리고 있습니다</h2>
+      <p>매장 형태와 상관없이 — 결제가 필요한 모든 업종에 카드단말기·포스기·키오스크를 설치합니다. 아래에 없는 업종도 편하게 문의주세요.</p>
+    </div>
+
+    <div class="biz-cat">
+      <h4>🍽️ 요식·외식업</h4>
+      <div class="biz-chips">
+        <span>한식당</span><span>중식당</span><span>일식당</span><span>양식당</span><span>분식집</span><span>김밥·토스트</span><span>치킨·호프집</span><span>술집·주점</span><span>포장마차</span><span>횟집</span><span>곱창·막창</span><span>족발·보쌈</span><span>국밥·해장국</span><span>떡볶이·분식</span><span>마라탕·쌀국수</span><span>초밥·라멘</span><span>피자·파스타</span><span>햄버거·버거</span><span>고깃집·구이</span><span>배달전문점</span><span>포장전문점</span>
+      </div>
+    </div>
+
+    <div class="biz-cat">
+      <h4>☕ 카페·디저트</h4>
+      <div class="biz-chips">
+        <span>카페·커피전문점</span><span>베이커리·제과점</span><span>디저트카페</span><span>도넛·와플</span><span>아이스크림·빙수</span><span>차·음료전문점</span><span>브런치카페</span><span>케이크·떡 전문점</span>
+      </div>
+    </div>
+
+    <div class="biz-cat">
+      <h4>🛒 소매·판매·유통</h4>
+      <div class="biz-chips">
+        <span>편의점</span><span>마트·슈퍼</span><span>정육점</span><span>청과·과일가게</span><span>반찬가게</span><span>꽃집</span><span>의류매장</span><span>신발·잡화</span><span>액세서리샵</span><span>안경점</span><span>문구·서점</span><span>휴대폰 매장</span><span>화장품 매장</span><span>건강식품점</span><span>주류·담배 판매점</span>
+      </div>
+    </div>
+
+    <div class="biz-cat">
+      <h4>💇 뷰티·미용</h4>
+      <div class="biz-chips">
+        <span>미용실·헤어샵</span><span>네일샵</span><span>피부관리실</span><span>왁싱샵</span><span>속눈썹·반영구</span><span>마사지·테라피</span><span>바버샵</span><span>타투샵</span>
+      </div>
+    </div>
+
+    <div class="biz-cat">
+      <h4>🏥 의료·건강</h4>
+      <div class="biz-chips">
+        <span>병원·의원</span><span>치과</span><span>한의원</span><span>약국</span><span>동물병원</span><span>안과·피부과</span><span>건강검진센터</span>
+      </div>
+    </div>
+
+    <div class="biz-cat">
+      <h4>🎓 교육·여가·오락</h4>
+      <div class="biz-chips">
+        <span>학원·교습소</span><span>헬스장·피트니스</span><span>필라테스·요가</span><span>골프연습장</span><span>PC방</span><span>노래방·코인노래방</span><span>스터디카페</span><span>독서실</span><span>키즈카페</span><span>보드게임카페</span><span>만화카페</span><span>볼링·당구장</span>
+      </div>
+    </div>
+
+    <div class="biz-cat">
+      <h4>🏨 숙박·생활서비스</h4>
+      <div class="biz-chips">
+        <span>펜션·게스트하우스</span><span>모텔·숙박업소</span><span>사진관·스튜디오</span><span>세탁소·빨래방</span><span>부동산</span><span>카센터·정비소</span><span>이사·청소업체</span><span>인테리어·시공</span>
+      </div>
+    </div>
+
+    <div class="biz-cat" style="margin-bottom:0">
+      <h4>🤖 무인·이동·행사</h4>
+      <div class="biz-chips">
+        <span>무인매장</span><span>무인아이스크림</span><span>무인밀키트·반찬</span><span>무인사진관</span><span>푸드트럭</span><span>플리마켓·야시장</span><span>팝업스토어</span><span>행사·축제 부스</span><span>이동식 판매</span><span>배달·방문 결제</span>
+      </div>
+    </div>
+
+    <div class="term-box">
+      <div class="tt">💳 카드단말기, 매장 환경에 맞게 골라드립니다</div>
+      <div class="td">유선이 어려운 매장, 야외·이동 매장도 걱정 없이 — 무선·휴대용 단말기까지 모두 취급합니다.</div>
+      <div class="term-chips">
+        <span class="hot">이동식 단말기</span><span class="hot">무선 단말기</span><span class="hot">휴대용 단말기</span><span class="hot">블루투스 단말기</span><span>유선 단말기</span><span>안드로이드 단말기</span><span>IC카드 단말기</span><span>삼성페이·애플페이</span><span>QR·간편결제</span><span>영수증 프린터 일체형</span><span>테이블·배달 결제</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap reveal">
+    <span class="eyebrow">Get Started</span>
+    <h2>서울 어디서든 무료로 상담받으세요</h2>
+    <p>매장에 맞는 단말기 추천부터 설치, 정산, AS까지 — 한 번의 상담으로 끝냅니다.</p>
+    <div class="hero-cta">
+      <a href="tel:01068321994" class="btn btn-primary">📞 전화 상담 010-6832-1994</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="logo">
+          <svg class="mark" viewBox="0 0 40 40" fill="none" width="28" height="28">
+            <rect width="40" height="40" rx="11" fill="#1b2933"/>
+            <rect x="9" y="13" width="22" height="15" rx="2.5" fill="#16C784"/>
+            <rect x="9" y="17" width="22" height="3" fill="#0A7E58"/>
+          </svg>
+          페이브릿지
+        </div>
+        <p>서울 전역 카드단말기·포스기·키오스크 설치 전문. 설치비 0원, 업계 최저 수수료, 24시간 AS로 소상공인의 결제를 책임집니다.</p>
+        <p style="margin-top:10px">📞 010-6832-1994 · 💬 카카오톡 채널: 페이브릿지 · 광고·스팸 전화는 정중히 사절합니다.</p>
+      </div>
+      <div class="foot-links">
+        <a href="#regions">지역 안내</a>
+        <a href="#why">왜 페이브릿지</a>
+        <a href="#industries">업종별 솔루션</a>
+        <a href="#pricing">요금</a>
+        <a href="tel:01068321994">전화 상담</a>
+      </div>
+    </div>
+    <div class="foot-bottom">© 2026 PayBridge. All rights reserved. · 본 페이지는 디자인 예시용으로 제작되었습니다.</div>
+  </div>
+</footer>
+
+<div class="floaters">
+  <a href="tel:01068321994" class="fl-tel" title="전화 상담" aria-label="전화 상담">📞</a>
+</div>
+
+<script>
+  const nav=document.getElementById('nav');
+  addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>10));
+  const menuBtn=document.getElementById('menuBtn'),navlinks=document.getElementById('navlinks');
+  menuBtn.addEventListener('click',()=>navlinks.classList.toggle('open'));
+  navlinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>navlinks.classList.remove('open')));
+
+  // gu selector
+  const guBtns=document.querySelectorAll('.gu-btn'),guPanels=document.querySelectorAll('.gu-panel');
+  guBtns.forEach(b=>b.addEventListener('click',()=>{
+    guBtns.forEach(x=>x.classList.remove('on'));b.classList.add('on');
+    guPanels.forEach(p=>p.classList.toggle('on',p.dataset.panel===b.dataset.gu));
+  }));
+
+  const io=new IntersectionObserver((es)=>es.forEach(en=>{
+    if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}
+  }),{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const fmt=n=>n.toLocaleString('ko-KR');
+  const sObs=new IntersectionObserver((es)=>es.forEach(en=>{
+    if(!en.isIntersecting)return;
+    const el=en.target,t=+el.dataset.target,suf=el.dataset.suffix||'';
+    if(reduce||t===0){el.textContent=fmt(t)+suf;sObs.unobserve(el);return;}
+    let s=null;const dur=1500;
+    const step=(ts)=>{if(!s)s=ts;const p=Math.min((ts-s)/dur,1);
+      el.textContent=fmt(Math.floor((1-Math.pow(1-p,3))*t))+suf;
+      if(p<1)requestAnimationFrame(step);};
+    requestAnimationFrame(step);sObs.unobserve(el);
+  }),{threshold:.5});
+  document.querySelectorAll('.stat .num').forEach(n=>sObs.observe(n));
+</script>
+</body>
+</html>
