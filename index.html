@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>H정보통신 — 서울 전역 카드단말기·포스기 설치 전문</title>
-<meta name="description" content="서울 25개 자치구 카드단말기·포스기·키오스크 설치 전문. 당일 설치, 설치비 무료, 업계 최저 수수료. 강남구부터 중랑구까지 동 단위 방문 설치." />
+<title>H정보통신 — 수도권(서울·인천·경기) 카드단말기·포스기 설치 전문</title>
+<meta name="description" content="서울·인천·경기 수도권 전역 카드단말기·포스기·키오스크 설치 전문. 당일 설치, 설치비 무료, 업계 최저 수수료. 동 단위 방문 설치." />
 <meta name="naver-site-verification" content="518da7603487ef5bdb0ddf88667effb31be0012f" />
 <meta name="google-site-verification" content="bRWgzWl26NkMftWhCJw-FYSR5SSCDHinbNpy1CfwJ-U" />
 <!-- Google tag (gtag.js) - GA4 방문자 분석 -->
@@ -94,6 +94,10 @@
   /* region selector */
   .region{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
   .gu-grid{display:flex;flex-wrap:wrap;gap:9px;justify-content:center;margin-bottom:32px}
+  .region-group{margin-top:46px;padding-top:40px;border-top:1px dashed var(--line)}
+  .region-group:first-of-type{margin-top:0;padding-top:0;border-top:none}
+  .region-title{font-size:1.25rem;margin-bottom:20px;display:flex;align-items:center;gap:9px;justify-content:center}
+  .region-title span{font-size:.82rem;font-weight:600;color:var(--muted)}
   .gu-btn{font-size:.88rem;font-weight:700;padding:9px 16px;border-radius:999px;border:1.5px solid var(--line);background:#fff;color:var(--ink-soft);cursor:pointer;transition:.15s}
   .gu-btn:hover{border-color:var(--brand);color:var(--brand)}
   .gu-btn.on{background:var(--brand);color:#fff;border-color:var(--brand)}
@@ -263,15 +267,15 @@
   </div>
 </header>
 
-<div class="crumb"><div class="wrap">홈 › <span>서울특별시</span></div></div>
+<div class="crumb"><div class="wrap">홈 › <span>수도권 (서울·인천·경기)</span></div></div>
 
 <a id="top"></a>
 <section class="hero">
   <div class="wrap hero-grid">
     <div class="reveal in">
-      <span class="loc-pill">📍 서울특별시 25개 자치구 전역</span>
-      <h1>서울 소상공인<br><span class="hl">카드단말기·포스기</span><br>당일 설치 전문</h1>
-      <p class="lead">강남구부터 중랑구까지 — 서울 전 지역 동 단위로 방문 설치합니다. 신규 창업·단말기 교체 모두 설치비 무료, 업계 최저 수수료, 모든 카드사 일괄 가맹으로 처리해 드립니다.</p>
+      <span class="loc-pill">📍 수도권 전역 · 서울 · 인천 · 경기</span>
+      <h1>수도권 소상공인<br><span class="hl">카드단말기·포스기</span><br>당일 설치 전문</h1>
+      <p class="lead">서울·인천·경기 수도권 전 지역 동 단위로 방문 설치합니다. 신규 창업·단말기 교체 모두 설치비 무료, 업계 최저 수수료, 모든 카드사 일괄 가맹으로 처리해 드립니다.</p>
       <div class="hero-cta">
         <a href="tel:01068321994" class="btn btn-primary">📞 전화 상담 010-6832-1994</a>
         <a href="#regions" class="btn btn-ghost">우리 동네 찾기</a>
@@ -299,7 +303,7 @@
 
 <section class="stats" id="statsSec">
   <div class="wrap stats-grid">
-    <div class="stat"><div class="num" data-target="25" data-suffix="개 구">0</div><div class="lab">서울 전 자치구</div></div>
+    <div class="stat"><div class="num" data-target="66" data-suffix="곳">0</div><div class="lab">수도권 시·군·구</div></div>
     <div class="stat"><div class="num" data-target="18000" data-suffix="+">0</div><div class="lab">누적 설치 매장</div></div>
     <div class="stat"><div class="num" data-target="0" data-suffix="원">0</div><div class="lab">초기 설치 비용</div></div>
     <div class="stat"><div class="num" data-target="99" data-suffix="%">0</div><div class="lab">재계약 만족도</div></div>
@@ -309,11 +313,14 @@
 <section class="block region" id="regions">
   <div class="wrap">
     <div class="head reveal">
-      <span class="eyebrow">Seoul Coverage</span>
-      <h2>서울 자치구별 설치 지역</h2>
-      <p>자치구를 선택하면 동네별 설치 가능 지역을 확인할 수 있어요. 서울 전역 동 단위까지 방문합니다.</p>
+      <span class="eyebrow">Metro Coverage</span>
+      <h2>수도권 지역별 설치 안내</h2>
+      <p>서울·인천·경기 — 지역을 선택하면 동네별 설치 가능 지역을 확인할 수 있어요. 수도권 전역 동 단위까지 방문합니다.</p>
     </div>
-    <div class="gu-grid reveal" id="guGrid">
+
+    <div class="region-group reveal">
+    <h3 class="region-title">🏙️ 서울특별시 <span>25개 자치구</span></h3>
+    <div class="gu-grid" id="guGrid">
         <button class="gu-btn on" data-gu="0">강남구</button>
         <button class="gu-btn" data-gu="1">강동구</button>
         <button class="gu-btn" data-gu="2">강북구</button>
@@ -661,6 +668,375 @@
         </div>
       </div>
     </div>
+    </div>
+
+    <div class="region-group reveal">
+    <h3 class="region-title">🌊 인천광역시 <span>10개 군·구</span></h3>
+    <div class="gu-grid">
+        <button class="gu-btn on" data-gu="i0">중구</button>
+        <button class="gu-btn" data-gu="i1">동구</button>
+        <button class="gu-btn" data-gu="i2">미추홀구</button>
+        <button class="gu-btn" data-gu="i3">연수구</button>
+        <button class="gu-btn" data-gu="i4">남동구</button>
+        <button class="gu-btn" data-gu="i5">부평구</button>
+        <button class="gu-btn" data-gu="i6">계양구</button>
+        <button class="gu-btn" data-gu="i7">서구</button>
+        <button class="gu-btn" data-gu="i8">강화군</button>
+        <button class="gu-btn" data-gu="i9">옹진군</button>
+    </div>
+    <div>
+      <div class="gu-panel on" data-panel="i0">
+        <h3>인천 중구 카드단말기·포스기 설치</h3>
+        <p class="gu-desc">인천 중구 전역 당일 방문 설치 · 동 단위까지 매칭 가능합니다. 동네를 눌러 바로 전화 상담하세요.</p>
+        <div class="dong-wrap">
+          <a href="tel:01068321994" class="dong-chip" title="인천 중구 신포동 카드단말기·포스기 설치 전화 상담">신포동</a>
+          <a href="tel:01068321994" class="dong-chip" title="인천 중구 신흥동 카드단말기·포스기 설치 전화 상담">신흥동</a>
+          <a href="tel:01068321994" class="dong-chip" title="인천 중구 운서동 카드단말기·포스기 설치 전화 상담">운서동</a>
+          <a href="tel:01068321994" class="dong-chip" title="인천 중구 영종동 카드단말기·포스기 설치 전화 상담">영종동</a>
+          <a href="tel:01068321994" class="dong-chip" title="인천 중구 항동 카드단말기·포스기 설치 전화 상담">항동</a>
+        </div>
+      </div>
+      <div class="gu-panel" data-panel="i1">
+        <h3>인천 동구 카드단말기·포스기 설치</h3>
+        <p class="gu-desc">인천 동구 전역 당일 방문 설치 · 동 단위까지 매칭 가능합니다. 동네를 눌러 바로 전화 상담하세요.</p>
+        <div class="dong-wrap">
+          <a href="tel:01068321994" class="dong-chip" title="인천 동구 송현동 카드단말기·포스기 설치 전화 상담">송현동</a>
+          <a href="tel:01068321994" class="dong-chip" title="인천 동구 화수동 카드단말기·포스기 설치 전화 상담">화수동</a>
+          <a href="tel:01068321994" class="dong-chip" title="인천 동구 만석동 카드단말기·포스기 설치 전화 상담">만석동</a>
+          <a href="tel:01068321994" class="dong-chip" title="인천 동구 금창동 카드단말기·포스기 설치 전화 상담">금창동</a>
+        </div>
+      </div>
+      <div class="gu-panel" data-panel="i2">
+        <h3>인천 미추홀구 카드단말기·포스기 설치</h3>
+        <p class="gu-desc">인천 미추홀구 전역 당일 방문 설치 · 동 단위까지 매칭 가능합니다. 동네를 눌러 바로 전화 상담하세요.</p>
+        <div class="dong-wrap">
+          <a href="tel:01068321994" class="dong-chip" title="인천 미추홀구 주안동 카드단말기·포스기 설치 전화 상담">주안동</a>
+          <a href="tel:01068321994" class="dong-chip" title="인천 미추홀구 용현동 카드단말기·포스기 설치 전화 상담">용현동</a>
+          <a href="tel:01068321994" class="dong-chip" title="인천 미추홀구 학익동 카드단말기·포스기 설치 전화 상담">학익동</a>
+          <a href="tel:01068321994" class="dong-chip" title="인천 미추홀구 도화동 카드단말기·포스기 설치 전화 상담">도화동</a>
+          <a href="tel:01068321994" class="dong-chip" title="인천 미추홀구 숭의동 카드단말기·포스기 설치 전화 상담">숭의동</a>
+        </div>
+      </div>
+      <div class="gu-panel" data-panel="i3">
+        <h3>인천 연수구 카드단말기·포스기 설치</h3>
+        <p class="gu-desc">인천 연수구 전역 당일 방문 설치 · 동 단위까지 매칭 가능합니다. 동네를 눌러 바로 전화 상담하세요.</p>
+        <div class="dong-wrap">
+          <a href="tel:01068321994" class="dong-chip" title="인천 연수구 송도동 카드단말기·포스기 설치 전화 상담">송도동</a>
+          <a href="tel:01068321994" class="dong-chip" title="인천 연수구 연수동 카드단말기·포스기 설치 전화 상담">연수동</a>
+          <a href="tel:01068321994" class="dong-chip" title="인천 연수구 청학동 카드단말기·포스기 설치 전화 상담">청학동</a>
+          <a href="tel:01068321994" class="dong-chip" title="인천 연수구 동춘동 카드단말기·포스기 설치 전화 상담">동춘동</a>
+          <a href="tel:01068321994" class="dong-chip" title="인천 연수구 옥련동 카드단말기·포스기 설치 전화 상담">옥련동</a>
+        </div>
+      </div>
+      <div class="gu-panel" data-panel="i4">
+        <h3>인천 남동구 카드단말기·포스기 설치</h3>
+        <p class="gu-desc">인천 남동구 전역 당일 방문 설치 · 동 단위까지 매칭 가능합니다. 동네를 눌러 바로 전화 상담하세요.</p>
+        <div class="dong-wrap">
+          <a href="tel:01068321994" class="dong-chip" title="인천 남동구 구월동 카드단말기·포스기 설치 전화 상담">구월동</a>
+          <a href="tel:01068321994" class="dong-chip" title="인천 남동구 논현동 카드단말기·포스기 설치 전화 상담">논현동</a>
+          <a href="tel:01068321994" class="dong-chip" title="인천 남동구 만수동 카드단말기·포스기 설치 전화 상담">만수동</a>
+          <a href="tel:01068321994" class="dong-chip" title="인천 남동구 간석동 카드단말기·포스기 설치 전화 상담">간석동</a>
+          <a href="tel:01068321994" class="dong-chip" title="인천 남동구 서창동 카드단말기·포스기 설치 전화 상담">서창동</a>
+        </div>
+      </div>
+      <div class="gu-panel" data-panel="i5">
+        <h3>인천 부평구 카드단말기·포스기 설치</h3>
+        <p class="gu-desc">인천 부평구 전역 당일 방문 설치 · 동 단위까지 매칭 가능합니다. 동네를 눌러 바로 전화 상담하세요.</p>
+        <div class="dong-wrap">
+          <a href="tel:01068321994" class="dong-chip" title="인천 부평구 부평동 카드단말기·포스기 설치 전화 상담">부평동</a>
+          <a href="tel:01068321994" class="dong-chip" title="인천 부평구 산곡동 카드단말기·포스기 설치 전화 상담">산곡동</a>
+          <a href="tel:01068321994" class="dong-chip" title="인천 부평구 부개동 카드단말기·포스기 설치 전화 상담">부개동</a>
+          <a href="tel:01068321994" class="dong-chip" title="인천 부평구 십정동 카드단말기·포스기 설치 전화 상담">십정동</a>
+          <a href="tel:01068321994" class="dong-chip" title="인천 부평구 청천동 카드단말기·포스기 설치 전화 상담">청천동</a>
+        </div>
+      </div>
+      <div class="gu-panel" data-panel="i6">
+        <h3>인천 계양구 카드단말기·포스기 설치</h3>
+        <p class="gu-desc">인천 계양구 전역 당일 방문 설치 · 동 단위까지 매칭 가능합니다. 동네를 눌러 바로 전화 상담하세요.</p>
+        <div class="dong-wrap">
+          <a href="tel:01068321994" class="dong-chip" title="인천 계양구 계산동 카드단말기·포스기 설치 전화 상담">계산동</a>
+          <a href="tel:01068321994" class="dong-chip" title="인천 계양구 작전동 카드단말기·포스기 설치 전화 상담">작전동</a>
+          <a href="tel:01068321994" class="dong-chip" title="인천 계양구 효성동 카드단말기·포스기 설치 전화 상담">효성동</a>
+          <a href="tel:01068321994" class="dong-chip" title="인천 계양구 병방동 카드단말기·포스기 설치 전화 상담">병방동</a>
+        </div>
+      </div>
+      <div class="gu-panel" data-panel="i7">
+        <h3>인천 서구 카드단말기·포스기 설치</h3>
+        <p class="gu-desc">인천 서구 전역 당일 방문 설치 · 동 단위까지 매칭 가능합니다. 동네를 눌러 바로 전화 상담하세요.</p>
+        <div class="dong-wrap">
+          <a href="tel:01068321994" class="dong-chip" title="인천 서구 청라동 카드단말기·포스기 설치 전화 상담">청라동</a>
+          <a href="tel:01068321994" class="dong-chip" title="인천 서구 검암동 카드단말기·포스기 설치 전화 상담">검암동</a>
+          <a href="tel:01068321994" class="dong-chip" title="인천 서구 가정동 카드단말기·포스기 설치 전화 상담">가정동</a>
+          <a href="tel:01068321994" class="dong-chip" title="인천 서구 석남동 카드단말기·포스기 설치 전화 상담">석남동</a>
+          <a href="tel:01068321994" class="dong-chip" title="인천 서구 검단 카드단말기·포스기 설치 전화 상담">검단</a>
+        </div>
+      </div>
+      <div class="gu-panel" data-panel="i8">
+        <h3>인천 강화군 카드단말기·포스기 설치</h3>
+        <p class="gu-desc">인천 강화군 전역 당일~익일 방문 설치 · 읍·면 단위까지 매칭 가능합니다. 지역을 눌러 바로 전화 상담하세요.</p>
+        <div class="dong-wrap">
+          <a href="tel:01068321994" class="dong-chip" title="인천 강화군 강화읍 카드단말기·포스기 설치 전화 상담">강화읍</a>
+          <a href="tel:01068321994" class="dong-chip" title="인천 강화군 길상면 카드단말기·포스기 설치 전화 상담">길상면</a>
+          <a href="tel:01068321994" class="dong-chip" title="인천 강화군 화도면 카드단말기·포스기 설치 전화 상담">화도면</a>
+          <a href="tel:01068321994" class="dong-chip" title="인천 강화군 선원면 카드단말기·포스기 설치 전화 상담">선원면</a>
+        </div>
+      </div>
+      <div class="gu-panel" data-panel="i9">
+        <h3>인천 옹진군 카드단말기·포스기 설치</h3>
+        <p class="gu-desc">인천 옹진군 도서 지역까지 방문 설치 협의 가능합니다. 지역을 눌러 바로 전화 상담하세요.</p>
+        <div class="dong-wrap">
+          <a href="tel:01068321994" class="dong-chip" title="인천 옹진군 영흥면 카드단말기·포스기 설치 전화 상담">영흥면</a>
+          <a href="tel:01068321994" class="dong-chip" title="인천 옹진군 백령면 카드단말기·포스기 설치 전화 상담">백령면</a>
+          <a href="tel:01068321994" class="dong-chip" title="인천 옹진군 연평면 카드단말기·포스기 설치 전화 상담">연평면</a>
+          <a href="tel:01068321994" class="dong-chip" title="인천 옹진군 덕적면 카드단말기·포스기 설치 전화 상담">덕적면</a>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <div class="region-group reveal">
+    <h3 class="region-title">🏞️ 경기도 <span>주요 도시</span></h3>
+    <div class="gu-grid">
+        <button class="gu-btn on" data-gu="g0">수원시</button>
+        <button class="gu-btn" data-gu="g1">성남시</button>
+        <button class="gu-btn" data-gu="g2">고양시</button>
+        <button class="gu-btn" data-gu="g3">용인시</button>
+        <button class="gu-btn" data-gu="g4">부천시</button>
+        <button class="gu-btn" data-gu="g5">안산시</button>
+        <button class="gu-btn" data-gu="g6">안양시</button>
+        <button class="gu-btn" data-gu="g7">화성시</button>
+        <button class="gu-btn" data-gu="g8">남양주시</button>
+        <button class="gu-btn" data-gu="g9">평택시</button>
+        <button class="gu-btn" data-gu="g10">의정부시</button>
+        <button class="gu-btn" data-gu="g11">시흥시</button>
+        <button class="gu-btn" data-gu="g12">파주시</button>
+        <button class="gu-btn" data-gu="g13">김포시</button>
+        <button class="gu-btn" data-gu="g14">광명시</button>
+        <button class="gu-btn" data-gu="g15">광주시</button>
+        <button class="gu-btn" data-gu="g16">군포시</button>
+        <button class="gu-btn" data-gu="g17">하남시</button>
+        <button class="gu-btn" data-gu="g18">오산시</button>
+        <button class="gu-btn" data-gu="g19">구리시</button>
+    </div>
+    <div>
+      <div class="gu-panel on" data-panel="g0">
+        <h3>수원시 카드단말기·포스기 설치</h3>
+        <p class="gu-desc">수원시 전역 당일 방문 설치 · 동 단위까지 매칭 가능합니다. 동네를 눌러 바로 전화 상담하세요.</p>
+        <div class="dong-wrap">
+          <a href="tel:01068321994" class="dong-chip" title="수원시 영통동 카드단말기·포스기 설치 전화 상담">영통동</a>
+          <a href="tel:01068321994" class="dong-chip" title="수원시 인계동 카드단말기·포스기 설치 전화 상담">인계동</a>
+          <a href="tel:01068321994" class="dong-chip" title="수원시 광교 카드단말기·포스기 설치 전화 상담">광교</a>
+          <a href="tel:01068321994" class="dong-chip" title="수원시 권선동 카드단말기·포스기 설치 전화 상담">권선동</a>
+          <a href="tel:01068321994" class="dong-chip" title="수원시 매탄동 카드단말기·포스기 설치 전화 상담">매탄동</a>
+        </div>
+      </div>
+      <div class="gu-panel" data-panel="g1">
+        <h3>성남시 카드단말기·포스기 설치</h3>
+        <p class="gu-desc">성남시 전역 당일 방문 설치 · 동 단위까지 매칭 가능합니다. 동네를 눌러 바로 전화 상담하세요.</p>
+        <div class="dong-wrap">
+          <a href="tel:01068321994" class="dong-chip" title="성남시 분당 카드단말기·포스기 설치 전화 상담">분당</a>
+          <a href="tel:01068321994" class="dong-chip" title="성남시 서현동 카드단말기·포스기 설치 전화 상담">서현동</a>
+          <a href="tel:01068321994" class="dong-chip" title="성남시 정자동 카드단말기·포스기 설치 전화 상담">정자동</a>
+          <a href="tel:01068321994" class="dong-chip" title="성남시 판교 카드단말기·포스기 설치 전화 상담">판교</a>
+          <a href="tel:01068321994" class="dong-chip" title="성남시 야탑동 카드단말기·포스기 설치 전화 상담">야탑동</a>
+        </div>
+      </div>
+      <div class="gu-panel" data-panel="g2">
+        <h3>고양시 카드단말기·포스기 설치</h3>
+        <p class="gu-desc">고양시 전역 당일 방문 설치 · 동 단위까지 매칭 가능합니다. 동네를 눌러 바로 전화 상담하세요.</p>
+        <div class="dong-wrap">
+          <a href="tel:01068321994" class="dong-chip" title="고양시 일산 카드단말기·포스기 설치 전화 상담">일산</a>
+          <a href="tel:01068321994" class="dong-chip" title="고양시 정발산동 카드단말기·포스기 설치 전화 상담">정발산동</a>
+          <a href="tel:01068321994" class="dong-chip" title="고양시 화정동 카드단말기·포스기 설치 전화 상담">화정동</a>
+          <a href="tel:01068321994" class="dong-chip" title="고양시 행신동 카드단말기·포스기 설치 전화 상담">행신동</a>
+          <a href="tel:01068321994" class="dong-chip" title="고양시 마두동 카드단말기·포스기 설치 전화 상담">마두동</a>
+        </div>
+      </div>
+      <div class="gu-panel" data-panel="g3">
+        <h3>용인시 카드단말기·포스기 설치</h3>
+        <p class="gu-desc">용인시 전역 당일 방문 설치 · 동 단위까지 매칭 가능합니다. 동네를 눌러 바로 전화 상담하세요.</p>
+        <div class="dong-wrap">
+          <a href="tel:01068321994" class="dong-chip" title="용인시 수지 카드단말기·포스기 설치 전화 상담">수지</a>
+          <a href="tel:01068321994" class="dong-chip" title="용인시 기흥 카드단말기·포스기 설치 전화 상담">기흥</a>
+          <a href="tel:01068321994" class="dong-chip" title="용인시 동백 카드단말기·포스기 설치 전화 상담">동백</a>
+          <a href="tel:01068321994" class="dong-chip" title="용인시 죽전동 카드단말기·포스기 설치 전화 상담">죽전동</a>
+          <a href="tel:01068321994" class="dong-chip" title="용인시 신갈동 카드단말기·포스기 설치 전화 상담">신갈동</a>
+        </div>
+      </div>
+      <div class="gu-panel" data-panel="g4">
+        <h3>부천시 카드단말기·포스기 설치</h3>
+        <p class="gu-desc">부천시 전역 당일 방문 설치 · 동 단위까지 매칭 가능합니다. 동네를 눌러 바로 전화 상담하세요.</p>
+        <div class="dong-wrap">
+          <a href="tel:01068321994" class="dong-chip" title="부천시 상동 카드단말기·포스기 설치 전화 상담">상동</a>
+          <a href="tel:01068321994" class="dong-chip" title="부천시 중동 카드단말기·포스기 설치 전화 상담">중동</a>
+          <a href="tel:01068321994" class="dong-chip" title="부천시 소사동 카드단말기·포스기 설치 전화 상담">소사동</a>
+          <a href="tel:01068321994" class="dong-chip" title="부천시 역곡동 카드단말기·포스기 설치 전화 상담">역곡동</a>
+          <a href="tel:01068321994" class="dong-chip" title="부천시 원미동 카드단말기·포스기 설치 전화 상담">원미동</a>
+        </div>
+      </div>
+      <div class="gu-panel" data-panel="g5">
+        <h3>안산시 카드단말기·포스기 설치</h3>
+        <p class="gu-desc">안산시 전역 당일 방문 설치 · 동 단위까지 매칭 가능합니다. 동네를 눌러 바로 전화 상담하세요.</p>
+        <div class="dong-wrap">
+          <a href="tel:01068321994" class="dong-chip" title="안산시 고잔동 카드단말기·포스기 설치 전화 상담">고잔동</a>
+          <a href="tel:01068321994" class="dong-chip" title="안산시 본오동 카드단말기·포스기 설치 전화 상담">본오동</a>
+          <a href="tel:01068321994" class="dong-chip" title="안산시 사동 카드단말기·포스기 설치 전화 상담">사동</a>
+          <a href="tel:01068321994" class="dong-chip" title="안산시 중앙동 카드단말기·포스기 설치 전화 상담">중앙동</a>
+          <a href="tel:01068321994" class="dong-chip" title="안산시 선부동 카드단말기·포스기 설치 전화 상담">선부동</a>
+        </div>
+      </div>
+      <div class="gu-panel" data-panel="g6">
+        <h3>안양시 카드단말기·포스기 설치</h3>
+        <p class="gu-desc">안양시 전역 당일 방문 설치 · 동 단위까지 매칭 가능합니다. 동네를 눌러 바로 전화 상담하세요.</p>
+        <div class="dong-wrap">
+          <a href="tel:01068321994" class="dong-chip" title="안양시 평촌 카드단말기·포스기 설치 전화 상담">평촌</a>
+          <a href="tel:01068321994" class="dong-chip" title="안양시 범계 카드단말기·포스기 설치 전화 상담">범계</a>
+          <a href="tel:01068321994" class="dong-chip" title="안양시 안양동 카드단말기·포스기 설치 전화 상담">안양동</a>
+          <a href="tel:01068321994" class="dong-chip" title="안양시 호계동 카드단말기·포스기 설치 전화 상담">호계동</a>
+          <a href="tel:01068321994" class="dong-chip" title="안양시 비산동 카드단말기·포스기 설치 전화 상담">비산동</a>
+        </div>
+      </div>
+      <div class="gu-panel" data-panel="g7">
+        <h3>화성시 카드단말기·포스기 설치</h3>
+        <p class="gu-desc">화성시 전역 당일 방문 설치 · 동·읍·면 단위까지 매칭 가능합니다. 동네를 눌러 바로 전화 상담하세요.</p>
+        <div class="dong-wrap">
+          <a href="tel:01068321994" class="dong-chip" title="화성시 동탄 카드단말기·포스기 설치 전화 상담">동탄</a>
+          <a href="tel:01068321994" class="dong-chip" title="화성시 병점 카드단말기·포스기 설치 전화 상담">병점</a>
+          <a href="tel:01068321994" class="dong-chip" title="화성시 향남읍 카드단말기·포스기 설치 전화 상담">향남읍</a>
+          <a href="tel:01068321994" class="dong-chip" title="화성시 봉담읍 카드단말기·포스기 설치 전화 상담">봉담읍</a>
+          <a href="tel:01068321994" class="dong-chip" title="화성시 남양읍 카드단말기·포스기 설치 전화 상담">남양읍</a>
+        </div>
+      </div>
+      <div class="gu-panel" data-panel="g8">
+        <h3>남양주시 카드단말기·포스기 설치</h3>
+        <p class="gu-desc">남양주시 전역 당일 방문 설치 · 동·읍·면 단위까지 매칭 가능합니다. 동네를 눌러 바로 전화 상담하세요.</p>
+        <div class="dong-wrap">
+          <a href="tel:01068321994" class="dong-chip" title="남양주시 다산동 카드단말기·포스기 설치 전화 상담">다산동</a>
+          <a href="tel:01068321994" class="dong-chip" title="남양주시 별내동 카드단말기·포스기 설치 전화 상담">별내동</a>
+          <a href="tel:01068321994" class="dong-chip" title="남양주시 화도읍 카드단말기·포스기 설치 전화 상담">화도읍</a>
+          <a href="tel:01068321994" class="dong-chip" title="남양주시 진접읍 카드단말기·포스기 설치 전화 상담">진접읍</a>
+          <a href="tel:01068321994" class="dong-chip" title="남양주시 평내동 카드단말기·포스기 설치 전화 상담">평내동</a>
+        </div>
+      </div>
+      <div class="gu-panel" data-panel="g9">
+        <h3>평택시 카드단말기·포스기 설치</h3>
+        <p class="gu-desc">평택시 전역 당일 방문 설치 · 동·읍·면 단위까지 매칭 가능합니다. 동네를 눌러 바로 전화 상담하세요.</p>
+        <div class="dong-wrap">
+          <a href="tel:01068321994" class="dong-chip" title="평택시 평택동 카드단말기·포스기 설치 전화 상담">평택동</a>
+          <a href="tel:01068321994" class="dong-chip" title="평택시 송탄 카드단말기·포스기 설치 전화 상담">송탄</a>
+          <a href="tel:01068321994" class="dong-chip" title="평택시 비전동 카드단말기·포스기 설치 전화 상담">비전동</a>
+          <a href="tel:01068321994" class="dong-chip" title="평택시 안중읍 카드단말기·포스기 설치 전화 상담">안중읍</a>
+          <a href="tel:01068321994" class="dong-chip" title="평택시 포승읍 카드단말기·포스기 설치 전화 상담">포승읍</a>
+        </div>
+      </div>
+      <div class="gu-panel" data-panel="g10">
+        <h3>의정부시 카드단말기·포스기 설치</h3>
+        <p class="gu-desc">의정부시 전역 당일 방문 설치 · 동 단위까지 매칭 가능합니다. 동네를 눌러 바로 전화 상담하세요.</p>
+        <div class="dong-wrap">
+          <a href="tel:01068321994" class="dong-chip" title="의정부시 의정부동 카드단말기·포스기 설치 전화 상담">의정부동</a>
+          <a href="tel:01068321994" class="dong-chip" title="의정부시 호원동 카드단말기·포스기 설치 전화 상담">호원동</a>
+          <a href="tel:01068321994" class="dong-chip" title="의정부시 민락동 카드단말기·포스기 설치 전화 상담">민락동</a>
+          <a href="tel:01068321994" class="dong-chip" title="의정부시 신곡동 카드단말기·포스기 설치 전화 상담">신곡동</a>
+          <a href="tel:01068321994" class="dong-chip" title="의정부시 가능동 카드단말기·포스기 설치 전화 상담">가능동</a>
+        </div>
+      </div>
+      <div class="gu-panel" data-panel="g11">
+        <h3>시흥시 카드단말기·포스기 설치</h3>
+        <p class="gu-desc">시흥시 전역 당일 방문 설치 · 동 단위까지 매칭 가능합니다. 동네를 눌러 바로 전화 상담하세요.</p>
+        <div class="dong-wrap">
+          <a href="tel:01068321994" class="dong-chip" title="시흥시 정왕동 카드단말기·포스기 설치 전화 상담">정왕동</a>
+          <a href="tel:01068321994" class="dong-chip" title="시흥시 배곧 카드단말기·포스기 설치 전화 상담">배곧</a>
+          <a href="tel:01068321994" class="dong-chip" title="시흥시 은행동 카드단말기·포스기 설치 전화 상담">은행동</a>
+          <a href="tel:01068321994" class="dong-chip" title="시흥시 대야동 카드단말기·포스기 설치 전화 상담">대야동</a>
+          <a href="tel:01068321994" class="dong-chip" title="시흥시 신천동 카드단말기·포스기 설치 전화 상담">신천동</a>
+        </div>
+      </div>
+      <div class="gu-panel" data-panel="g12">
+        <h3>파주시 카드단말기·포스기 설치</h3>
+        <p class="gu-desc">파주시 전역 당일 방문 설치 · 동·읍·면 단위까지 매칭 가능합니다. 동네를 눌러 바로 전화 상담하세요.</p>
+        <div class="dong-wrap">
+          <a href="tel:01068321994" class="dong-chip" title="파주시 운정 카드단말기·포스기 설치 전화 상담">운정</a>
+          <a href="tel:01068321994" class="dong-chip" title="파주시 금촌동 카드단말기·포스기 설치 전화 상담">금촌동</a>
+          <a href="tel:01068321994" class="dong-chip" title="파주시 교하동 카드단말기·포스기 설치 전화 상담">교하동</a>
+          <a href="tel:01068321994" class="dong-chip" title="파주시 문산읍 카드단말기·포스기 설치 전화 상담">문산읍</a>
+          <a href="tel:01068321994" class="dong-chip" title="파주시 조리읍 카드단말기·포스기 설치 전화 상담">조리읍</a>
+        </div>
+      </div>
+      <div class="gu-panel" data-panel="g13">
+        <h3>김포시 카드단말기·포스기 설치</h3>
+        <p class="gu-desc">김포시 전역 당일 방문 설치 · 동·읍·면 단위까지 매칭 가능합니다. 동네를 눌러 바로 전화 상담하세요.</p>
+        <div class="dong-wrap">
+          <a href="tel:01068321994" class="dong-chip" title="김포시 장기동 카드단말기·포스기 설치 전화 상담">장기동</a>
+          <a href="tel:01068321994" class="dong-chip" title="김포시 구래동 카드단말기·포스기 설치 전화 상담">구래동</a>
+          <a href="tel:01068321994" class="dong-chip" title="김포시 사우동 카드단말기·포스기 설치 전화 상담">사우동</a>
+          <a href="tel:01068321994" class="dong-chip" title="김포시 풍무동 카드단말기·포스기 설치 전화 상담">풍무동</a>
+          <a href="tel:01068321994" class="dong-chip" title="김포시 운양동 카드단말기·포스기 설치 전화 상담">운양동</a>
+        </div>
+      </div>
+      <div class="gu-panel" data-panel="g14">
+        <h3>광명시 카드단말기·포스기 설치</h3>
+        <p class="gu-desc">광명시 전역 당일 방문 설치 · 동 단위까지 매칭 가능합니다. 동네를 눌러 바로 전화 상담하세요.</p>
+        <div class="dong-wrap">
+          <a href="tel:01068321994" class="dong-chip" title="광명시 광명동 카드단말기·포스기 설치 전화 상담">광명동</a>
+          <a href="tel:01068321994" class="dong-chip" title="광명시 철산동 카드단말기·포스기 설치 전화 상담">철산동</a>
+          <a href="tel:01068321994" class="dong-chip" title="광명시 하안동 카드단말기·포스기 설치 전화 상담">하안동</a>
+          <a href="tel:01068321994" class="dong-chip" title="광명시 소하동 카드단말기·포스기 설치 전화 상담">소하동</a>
+          <a href="tel:01068321994" class="dong-chip" title="광명시 일직동 카드단말기·포스기 설치 전화 상담">일직동</a>
+        </div>
+      </div>
+      <div class="gu-panel" data-panel="g15">
+        <h3>광주시 카드단말기·포스기 설치</h3>
+        <p class="gu-desc">광주시 전역 당일 방문 설치 · 동·읍·면 단위까지 매칭 가능합니다. 동네를 눌러 바로 전화 상담하세요.</p>
+        <div class="dong-wrap">
+          <a href="tel:01068321994" class="dong-chip" title="광주시 경안동 카드단말기·포스기 설치 전화 상담">경안동</a>
+          <a href="tel:01068321994" class="dong-chip" title="광주시 오포읍 카드단말기·포스기 설치 전화 상담">오포읍</a>
+          <a href="tel:01068321994" class="dong-chip" title="광주시 곤지암 카드단말기·포스기 설치 전화 상담">곤지암</a>
+          <a href="tel:01068321994" class="dong-chip" title="광주시 태전동 카드단말기·포스기 설치 전화 상담">태전동</a>
+          <a href="tel:01068321994" class="dong-chip" title="광주시 송정동 카드단말기·포스기 설치 전화 상담">송정동</a>
+        </div>
+      </div>
+      <div class="gu-panel" data-panel="g16">
+        <h3>군포시 카드단말기·포스기 설치</h3>
+        <p class="gu-desc">군포시 전역 당일 방문 설치 · 동 단위까지 매칭 가능합니다. 동네를 눌러 바로 전화 상담하세요.</p>
+        <div class="dong-wrap">
+          <a href="tel:01068321994" class="dong-chip" title="군포시 산본동 카드단말기·포스기 설치 전화 상담">산본동</a>
+          <a href="tel:01068321994" class="dong-chip" title="군포시 금정동 카드단말기·포스기 설치 전화 상담">금정동</a>
+          <a href="tel:01068321994" class="dong-chip" title="군포시 당동 카드단말기·포스기 설치 전화 상담">당동</a>
+          <a href="tel:01068321994" class="dong-chip" title="군포시 부곡동 카드단말기·포스기 설치 전화 상담">부곡동</a>
+        </div>
+      </div>
+      <div class="gu-panel" data-panel="g17">
+        <h3>하남시 카드단말기·포스기 설치</h3>
+        <p class="gu-desc">하남시 전역 당일 방문 설치 · 동 단위까지 매칭 가능합니다. 동네를 눌러 바로 전화 상담하세요.</p>
+        <div class="dong-wrap">
+          <a href="tel:01068321994" class="dong-chip" title="하남시 미사동 카드단말기·포스기 설치 전화 상담">미사동</a>
+          <a href="tel:01068321994" class="dong-chip" title="하남시 덕풍동 카드단말기·포스기 설치 전화 상담">덕풍동</a>
+          <a href="tel:01068321994" class="dong-chip" title="하남시 신장동 카드단말기·포스기 설치 전화 상담">신장동</a>
+          <a href="tel:01068321994" class="dong-chip" title="하남시 풍산동 카드단말기·포스기 설치 전화 상담">풍산동</a>
+        </div>
+      </div>
+      <div class="gu-panel" data-panel="g18">
+        <h3>오산시 카드단말기·포스기 설치</h3>
+        <p class="gu-desc">오산시 전역 당일 방문 설치 · 동 단위까지 매칭 가능합니다. 동네를 눌러 바로 전화 상담하세요.</p>
+        <div class="dong-wrap">
+          <a href="tel:01068321994" class="dong-chip" title="오산시 오산동 카드단말기·포스기 설치 전화 상담">오산동</a>
+          <a href="tel:01068321994" class="dong-chip" title="오산시 원동 카드단말기·포스기 설치 전화 상담">원동</a>
+          <a href="tel:01068321994" class="dong-chip" title="오산시 세교동 카드단말기·포스기 설치 전화 상담">세교동</a>
+          <a href="tel:01068321994" class="dong-chip" title="오산시 부산동 카드단말기·포스기 설치 전화 상담">부산동</a>
+        </div>
+      </div>
+      <div class="gu-panel" data-panel="g19">
+        <h3>구리시 카드단말기·포스기 설치</h3>
+        <p class="gu-desc">구리시 전역 당일 방문 설치 · 동 단위까지 매칭 가능합니다. 동네를 눌러 바로 전화 상담하세요.</p>
+        <div class="dong-wrap">
+          <a href="tel:01068321994" class="dong-chip" title="구리시 인창동 카드단말기·포스기 설치 전화 상담">인창동</a>
+          <a href="tel:01068321994" class="dong-chip" title="구리시 교문동 카드단말기·포스기 설치 전화 상담">교문동</a>
+          <a href="tel:01068321994" class="dong-chip" title="구리시 수택동 카드단말기·포스기 설치 전화 상담">수택동</a>
+          <a href="tel:01068321994" class="dong-chip" title="구리시 갈매동 카드단말기·포스기 설치 전화 상담">갈매동</a>
+        </div>
+      </div>
+    </div>
+    </div>
   </div>
 </section>
 
@@ -846,8 +1222,8 @@
 
 <section class="block seo">
   <div class="wrap reveal">
-    <h2>서울 전 지역 카드단말기·포스기 설치, H정보통신</h2>
-    <p class="intro">H정보통신는 서울특별시 25개 자치구 전역에서 카드단말기·포스기·키오스크 설치를 진행하는 전문 업체입니다. 강남구, 서초구, 송파구, 마포구, 영등포구 등 서울 모든 자치구의 동 단위까지 당일 방문 설치하며, 신규 창업 매장 설치부터 단말기 교체, 모든 카드사 일괄 가맹까지 한 번에 처리합니다. 아래에서 우리 지역을 확인해 보세요.</p>
+    <h2>수도권(서울·인천·경기) 카드단말기·포스기 설치, H정보통신</h2>
+    <p class="intro">H정보통신은 서울특별시 25개 자치구, 인천광역시, 경기도 주요 도시 전역에서 카드단말기·포스기·키오스크 설치를 진행하는 전문 업체입니다. 강남·서초·송파·마포 등 서울은 물론, 인천 송도·부평·구월동, 경기 분당·일산·동탄·수원까지 수도권 동 단위로 당일 방문 설치하며, 신규 창업 매장 설치부터 단말기 교체, 모든 카드사 일괄 가맹까지 한 번에 처리합니다. 아래에서 우리 지역을 확인해 보세요.</p>
       <div class="seo-gu">
         <h4>강남구</h4>
         <div class="kw"><span>강남구 카드단말기</span><span>강남구 포스기</span><span>강남구 포스 설치</span><span>강남구 키오스크 설치</span><span>역삼동 카드단말기</span><span>삼성동 카드단말기</span><span>논현동 카드단말기</span><span>대치동 카드단말기</span><span>청담동 카드단말기</span><span>신사동 카드단말기</span><span>압구정동 카드단말기</span><span>개포동 카드단말기</span><span>도곡동 카드단말기</span><span>수서동 카드단말기</span><span>일원동 카드단말기</span><span>세곡동 카드단말기</span><span>역삼동 포스기</span><span>삼성동 포스기</span><span>논현동 포스기</span><span>대치동 포스기</span><span>청담동 포스기</span><span>신사동 포스기</span><span>압구정동 포스기</span><span>개포동 포스기</span><span>도곡동 포스기</span><span>수서동 포스기</span><span>일원동 포스기</span><span>세곡동 포스기</span></div>
@@ -1074,12 +1450,14 @@
   menuBtn.addEventListener('click',()=>navlinks.classList.toggle('open'));
   navlinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>navlinks.classList.remove('open')));
 
-  // gu selector
-  const guBtns=document.querySelectorAll('.gu-btn'),guPanels=document.querySelectorAll('.gu-panel');
-  guBtns.forEach(b=>b.addEventListener('click',()=>{
-    guBtns.forEach(x=>x.classList.remove('on'));b.classList.add('on');
-    guPanels.forEach(p=>p.classList.toggle('on',p.dataset.panel===b.dataset.gu));
-  }));
+  // gu selector (지역 그룹별로 독립 동작)
+  document.querySelectorAll('.region-group').forEach(group=>{
+    const guBtns=group.querySelectorAll('.gu-btn'),guPanels=group.querySelectorAll('.gu-panel');
+    guBtns.forEach(b=>b.addEventListener('click',()=>{
+      guBtns.forEach(x=>x.classList.remove('on'));b.classList.add('on');
+      guPanels.forEach(p=>p.classList.toggle('on',p.dataset.panel===b.dataset.gu));
+    }));
+  });
 
   const io=new IntersectionObserver((es)=>es.forEach(en=>{
     if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}
