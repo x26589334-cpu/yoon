@@ -175,13 +175,20 @@
   .price-tbl td:first-child{font-weight:800;background:var(--bg);text-align:center}
   .price-tbl .hl{color:var(--brand);font-weight:800}
   .price-note{font-size:.82rem;color:var(--muted);margin-top:14px;text-align:center}
-  .gallery-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:18px}
-  .photo-card{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#fff;box-shadow:var(--shadow)}
+  .gallery-slider{position:relative}
+  .gallery-track{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;padding:4px 2px 16px;-webkit-overflow-scrolling:touch}
+  .gallery-track::-webkit-scrollbar{height:8px}
+  .gallery-track::-webkit-scrollbar-thumb{background:var(--line);border-radius:999px}
+  .photo-card{flex:0 0 300px;scroll-snap-align:start;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#fff;box-shadow:var(--shadow)}
   .photo-card img{width:100%;height:220px;object-fit:cover;display:block;background:var(--bg)}
   .photo-ph{height:220px;display:flex;align-items:center;justify-content:center;font-size:2.6rem;background:var(--bg);color:var(--muted)}
   .photo-card .cap{padding:13px 16px}
   .photo-card .cap .d{font-size:.76rem;color:var(--brand);font-weight:800}
   .photo-card .cap .t{font-size:.95rem;font-weight:700;margin-top:3px}
+  .gal-arrow{position:absolute;top:114px;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:#fff;box-shadow:var(--shadow);cursor:pointer;font-size:1.5rem;line-height:1;display:flex;align-items:center;justify-content:center;z-index:2;color:var(--ink)}
+  .gal-arrow:hover{background:var(--brand);color:#fff;border-color:var(--brand)}
+  .gal-arrow.prev{left:6px}
+  .gal-arrow.next{right:6px}
 
   .seo{background:#fff;border-top:1px solid var(--line)}
   .seo h2{font-size:1.5rem;margin-bottom:14px}
@@ -1235,7 +1242,9 @@
       <h2>매일 올라오는 설치 현장</h2>
       <p>H정보통신이 직접 설치한 카드단말기·포스기·키오스크 현장 사진입니다. 매일 업데이트됩니다.</p>
     </div>
-    <div class="gallery-grid reveal">
+    <div class="gallery-slider reveal">
+      <button class="gal-arrow prev" id="galPrev" aria-label="이전 사진">‹</button>
+      <div class="gallery-track" id="galTrack">
 
       <!-- ▼▼▼ 새 사진은 이 줄 아래에 추가하세요. 위 '준비 중' 카드는 지우면 됩니다 ▼▼▼ -->
       <!-- ===== 사진 추가 템플릿 (복사 → 파일명·날짜·설명만 바꾸기) =====
@@ -1258,6 +1267,8 @@
         <div class="cap"><div class="d">속초</div><div class="t">속초 포스기 설치</div></div>
       </div>
 
+      </div>
+      <button class="gal-arrow next" id="galNext" aria-label="다음 사진">›</button>
     </div>
   </div>
 </section>
@@ -1501,6 +1512,15 @@
       guPanels.forEach(p=>p.classList.toggle('on',p.dataset.panel===b.dataset.gu));
     }));
   });
+
+  // 설치 사진 슬라이더 좌우 버튼
+  const galTrack=document.getElementById('galTrack');
+  if(galTrack){
+    const galStep=()=>{const c=galTrack.querySelector('.photo-card');return c?c.offsetWidth+18:320;};
+    const gp=document.getElementById('galPrev'),gn=document.getElementById('galNext');
+    gp&&gp.addEventListener('click',()=>galTrack.scrollBy({left:-galStep(),behavior:'smooth'}));
+    gn&&gn.addEventListener('click',()=>galTrack.scrollBy({left:galStep(),behavior:'smooth'}));
+  }
 
   const io=new IntersectionObserver((es)=>es.forEach(en=>{
     if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}
