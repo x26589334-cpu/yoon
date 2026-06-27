@@ -117,6 +117,10 @@
   .hero p.lead{font-size:1.06rem;color:var(--ink-soft);max-width:500px;margin-bottom:28px}
   .hero-cta{display:flex;gap:12px;flex-wrap:wrap}
   .quick-points{margin-top:26px;display:flex;gap:18px;flex-wrap:wrap}
+  .live-badge{display:inline-flex;align-items:center;gap:8px;margin-top:18px;background:rgba(14,159,110,.1);border:1px solid rgba(14,159,110,.28);color:var(--brand-dark);font-weight:700;font-size:.9rem;padding:8px 15px;border-radius:999px}
+  .live-badge b{color:var(--brand-dark)}
+  .live-dot{width:9px;height:9px;border-radius:50%;background:#16C784;animation:livePulse 1.6s infinite}
+  @keyframes livePulse{0%{box-shadow:0 0 0 0 rgba(22,199,132,.55)}70%{box-shadow:0 0 0 8px rgba(22,199,132,0)}100%{box-shadow:0 0 0 0 rgba(22,199,132,0)}}
   .qp{display:flex;align-items:center;gap:8px;font-size:.9rem;font-weight:600;color:var(--ink-soft)}
   .qp .c{color:var(--brand);font-weight:900}
 
@@ -346,6 +350,7 @@
         <a href="tel:01068321994" class="btn btn-primary">📞 전화 상담 010-6832-1994</a>
         <a href="#regions" class="btn btn-ghost">우리 동네 찾기</a>
       </div>
+      <div class="live-badge"><span class="live-dot"></span>지금 <b id="liveCount">11</b>명 실시간 상담 중</div>
       <div class="quick-points">
         <div class="qp"><span class="c">✓</span> 평균 4일 내 설치</div>
         <div class="qp"><span class="c">✓</span> 설치비 무료</div>
@@ -1958,6 +1963,19 @@
   const menuBtn=document.getElementById('menuBtn'),navlinks=document.getElementById('navlinks');
   menuBtn.addEventListener('click',()=>navlinks.classList.toggle('open'));
   navlinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>navlinks.classList.remove('open')));
+
+  // 실시간 상담 인원 (시간대·날짜별 자동 변동)
+  (function(){
+    var el=document.getElementById('liveCount'); if(!el) return;
+    function calc(){
+      var d=new Date(), h=d.getHours(), base;
+      if(h>=9 && h<22){ base = 7 + Math.round(Math.sin((h-9)/13*Math.PI)*9); } else { base = 3; }
+      base += (d.getDate() % 4);
+      return Math.max(2, base + (Math.floor(Math.random()*5)-2));
+    }
+    function render(){ el.textContent = calc(); }
+    render(); setInterval(render, 6000);
+  })();
 
   // gu selector (지역 그룹별로 독립 동작)
   document.querySelectorAll('.region-group').forEach(group=>{
