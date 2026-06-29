@@ -127,7 +127,8 @@
   .device-card{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:30px;box-shadow:var(--shadow)}
   .device-card .tagline{font-size:.78rem;font-weight:800;letter-spacing:.12em;color:var(--brand);margin-bottom:18px;text-transform:uppercase}
   .device-row{display:flex;gap:14px;justify-content:center;margin-bottom:22px}
-  .device{flex:1;text-align:center;border:1px solid var(--line);border-radius:14px;padding:18px 10px;background:var(--bg)}
+  .device{flex:1;text-align:center;border:1px solid var(--line);border-radius:14px;padding:18px 10px;background:var(--bg);text-decoration:none;color:inherit;transition:.15s}
+  a.device:hover{border-color:var(--brand);box-shadow:0 10px 24px -16px rgba(14,159,110,.6)}
   .device .ic{font-size:2rem;margin-bottom:8px}
   .device .nm{font-size:.84rem;font-weight:800}
   .device .ds{font-size:.72rem;color:var(--muted);margin-top:2px}
@@ -356,7 +357,7 @@
     <nav class="nav-links" id="navlinks">
       <a href="#regions">지역 안내</a>
       <a href="#why">H포스</a>
-      <a href="#industries">업종별 솔루션</a>
+      <a href="#industries">업종별 솔루션</a><a href="product/vending.html">무인자판기</a><a href="product/table-order.html">테이블오더</a>
       <a href="#pricing">요금</a>
       <a href="#faq">FAQ</a>
       <a href="blog.html">설치 후기</a>
@@ -394,8 +395,8 @@
         <div class="device"><div class="ic">💳</div><div class="nm">카드단말기</div><div class="ds">유선·무선·휴대형</div></div>
         <div class="device"><div class="ic">🖥️</div><div class="nm">포스(POS)</div><div class="ds">매장 통합 관리</div></div>
         <div class="device"><div class="ic">📱</div><div class="nm">키오스크</div><div class="ds">무인 주문·결제</div></div>
-        <div class="device"><div class="ic">🥤</div><div class="nm">무인자판기</div><div class="ds">무인 판매·결제</div></div>
-          <div class="device"><div class="ic">🍽️</div><div class="nm">테이블오더</div><div class="ds">테이블 주문·결제</div></div>
+        <a href="product/vending.html" class="device"><div class="ic">🥤</div><div class="nm">무인자판기</div><div class="ds">무인 판매·결제</div></a>
+          <a href="product/table-order.html" class="device"><div class="ic">🍽️</div><div class="nm">테이블오더</div><div class="ds">테이블 주문·결제</div></a>
       </div>
       <div class="approve">
         <div class="badge">✓</div>
@@ -854,7 +855,7 @@
       <div class="foot-links">
         <a href="#regions">지역 안내</a>
         <a href="#why">H포스</a>
-        <a href="#industries">업종별 솔루션</a>
+        <a href="#industries">업종별 솔루션</a><a href="product/vending.html">무인자판기</a><a href="product/table-order.html">테이블오더</a>
         <a href="#pricing">요금</a>
         <a href="#faq">FAQ</a>
         <a href="blog.html">설치 후기</a>
