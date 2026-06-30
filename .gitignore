@@ -1,2 +1,4 @@
 *.tmp
 dongs-def.tmp.js
+
+_batch.tsv
