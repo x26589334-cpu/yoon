@@ -42,3 +42,4 @@ img{display:block;max-width:100%}
 .rband a:hover{background:var(--brand-bright)}
 .rfoot{text-align:center;color:var(--muted);font-size:.82rem;padding:26px 20px 50px}
 @media(max-width:760px){.rhero{grid-template-columns:1fr}.rhero .himg{height:230px}.rhero h1{font-size:1.62rem}}
+.rcontent .vimg{display:block;width:100%;max-width:560px;border-radius:14px;margin:16px auto;border:1px solid var(--line);box-shadow:0 12px 30px -20px rgba(22,32,44,.5)}
