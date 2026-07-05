@@ -3,14 +3,14 @@
 $ErrorActionPreference='Stop'
 $repo="$env:USERPROFILE\Desktop\yoon"
 $enc=New-Object System.Text.UTF8Encoding($false)
-$dateDot='2026.07.04'; $dateIso='2026-07-04'
+$dateDot='2026.07.05'; $dateIso='2026-07-05'
 
 $posts=@(
- @{slug='2026-07-04-gangnam';   city='강남';   region='서울 강남구'; tail='역삼·삼성 상권 결제 구축'; img='pos-install-04.jpg'; sang='역삼·삼성동 오피스 상권과 대치·청담 일대'; dongs='역삼동, 삼성동, 논현동, 대치동, 청담동'},
- @{slug='2026-07-04-seocho';    city='서초';   region='서울 서초구'; tail='서초·반포 상권 결제 세팅'; img='pos-install-05.jpg'; sang='서초·반포동 업무 상권과 방배·양재 생활권'; dongs='서초동, 반포동, 잠원동, 방배동, 양재동'},
- @{slug='2026-07-04-yongin';    city='용인';   region='경기 용인시'; tail='수지·기흥 상권 결제 구축'; img='pos-install-13.jpg'; sang='수지·기흥 신도시와 죽전·동백 생활권'; dongs='죽전동, 동천동, 상현동, 풍덕천동, 신봉동'},
- @{slug='2026-07-04-uijeongbu'; city='의정부'; region='경기 의정부시'; tail='의정부·민락 상권 결제 세팅'; img='pos-install-27.jpg'; sang='의정부·민락동 상권과 신곡·호원 생활권'; dongs='의정부동, 호원동, 신곡동, 민락동, 장암동'},
- @{slug='2026-07-04-paju';      city='파주';   region='경기 파주시'; tail='운정·금촌 상권 결제 구축'; img='pos-install-33.jpg'; sang='운정 신도시와 금촌·문산 생활권'; dongs='금촌동, 교하동, 운정동, 문산읍, 조리읍'}
+ @{slug='2026-07-05-yeongdeungpo'; city='영등포'; region='서울 영등포구'; tail='여의도·영등포 상권 결제 구축'; img='pos-install-07.jpg'; sang='여의도 오피스 상권과 영등포·문래 생활권'; dongs='여의도동, 영등포동, 당산동, 문래동, 신길동'},
+ @{slug='2026-07-05-gwangjin';     city='광진';   region='서울 광진구'; tail='건대·자양 상권 결제 세팅'; img='pos-install-09.jpg'; sang='건대입구 상권과 자양·구의 생활권'; dongs='자양동, 구의동, 광장동, 화양동, 능동'},
+ @{slug='2026-07-05-gangdong';     city='강동';   region='서울 강동구'; tail='천호·길동 상권 결제 구축'; img='pos-install-10.jpg'; sang='천호 상권과 길동·둔촌 생활권'; dongs='천호동, 성내동, 길동, 둔촌동, 암사동'},
+ @{slug='2026-07-05-yeonsu';       city='연수구'; region='인천 연수구'; tail='송도·연수 상권 결제 세팅'; img='pos-install-11.jpg'; sang='송도국제도시 상권과 연수·동춘 생활권'; dongs='송도동, 연수동, 청학동, 동춘동, 옥련동'},
+ @{slug='2026-07-05-geomdan';      city='검단';   region='인천 서구'; tail='청라·검단 상권 결제 구축'; img='pos-install-14.jpg'; sang='청라국제도시 상권과 검단신도시 생활권'; dongs='검암동, 청라동, 당하동, 원당동, 마전동'}
 )
 
 $postTpl=@'
