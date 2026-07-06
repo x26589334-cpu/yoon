@@ -3,14 +3,14 @@
 $ErrorActionPreference='Stop'
 $repo="$env:USERPROFILE\Desktop\yoon"
 $enc=New-Object System.Text.UTF8Encoding($false)
-$dateDot='2026.07.05'; $dateIso='2026-07-05'
+$dateDot='2026.07.06'; $dateIso='2026-07-06'
 
 $posts=@(
- @{slug='2026-07-05-yeongdeungpo'; city='영등포'; region='서울 영등포구'; tail='여의도·영등포 상권 결제 구축'; img='pos-install-07.jpg'; sang='여의도 오피스 상권과 영등포·문래 생활권'; dongs='여의도동, 영등포동, 당산동, 문래동, 신길동'},
- @{slug='2026-07-05-gwangjin';     city='광진';   region='서울 광진구'; tail='건대·자양 상권 결제 세팅'; img='pos-install-09.jpg'; sang='건대입구 상권과 자양·구의 생활권'; dongs='자양동, 구의동, 광장동, 화양동, 능동'},
- @{slug='2026-07-05-gangdong';     city='강동';   region='서울 강동구'; tail='천호·길동 상권 결제 구축'; img='pos-install-10.jpg'; sang='천호 상권과 길동·둔촌 생활권'; dongs='천호동, 성내동, 길동, 둔촌동, 암사동'},
- @{slug='2026-07-05-yeonsu';       city='연수구'; region='인천 연수구'; tail='송도·연수 상권 결제 세팅'; img='pos-install-11.jpg'; sang='송도국제도시 상권과 연수·동춘 생활권'; dongs='송도동, 연수동, 청학동, 동춘동, 옥련동'},
- @{slug='2026-07-05-geomdan';      city='검단';   region='인천 서구'; tail='청라·검단 상권 결제 구축'; img='pos-install-14.jpg'; sang='청라국제도시 상권과 검단신도시 생활권'; dongs='검암동, 청라동, 당하동, 원당동, 마전동'}
+ @{slug='2026-07-06-gangseo';   city='강서';   region='서울 강서구'; tail='마곡·화곡 상권 결제 구축'; img='pos-install-16.jpg'; sang='마곡 첨단단지 상권과 화곡·등촌 생활권'; dongs='화곡동, 등촌동, 가양동, 마곡동, 염창동'},
+ @{slug='2026-07-06-gwanak';    city='관악';   region='서울 관악구'; tail='신림·봉천 상권 결제 세팅'; img='pos-install-18.jpg'; sang='서울대입구 상권과 신림·봉천 생활권'; dongs='봉천동, 신림동, 남현동, 서원동, 청룡동'},
+ @{slug='2026-07-06-guro';      city='구로';   region='서울 구로구'; tail='신도림·구로디지털 상권 결제 구축'; img='pos-install-20.jpg'; sang='신도림 상권과 구로디지털단지 생활권'; dongs='구로동, 신도림동, 개봉동, 고척동, 오류동'},
+ @{slug='2026-07-06-dongjak';   city='동작';   region='서울 동작구'; tail='사당·노량진 상권 결제 세팅'; img='pos-install-23.jpg'; sang='노량진 상권과 사당·상도 생활권'; dongs='노량진동, 상도동, 사당동, 대방동, 흑석동'},
+ @{slug='2026-07-06-seongdong'; city='성동';   region='서울 성동구'; tail='성수·왕십리 상권 결제 구축'; img='pos-install-26.jpg'; sang='성수동 카페 상권과 왕십리 생활권'; dongs='성수동, 왕십리동, 행당동, 금호동, 옥수동'}
 )
 
 $postTpl=@'
@@ -130,9 +130,11 @@ foreach($p in $posts){
   $newCards+=$c
 }
 
-# 3) 기존 카드 62개 그대로 추출 (페이지 순서 = 최신순)
+# 3) 기존 카드 그대로 추출 (모든 목록 페이지 자동 탐색, 최신순)
 $existing=@()
-foreach($pg in @('blog.html','blog-2.html','blog-3.html','blog-4.html','blog-5.html','blog-6.html','blog-7.html')){
+$pglist=@('blog.html'); $pn=2
+while(Test-Path (Join-Path $repo "blog-$pn.html")){ $pglist+="blog-$pn.html"; $pn++ }
+foreach($pg in $pglist){
   $t=Get-Content (Join-Path $repo $pg) -Raw -Encoding UTF8
   foreach($m in [regex]::Matches($t,'(?s)<a class="post-card".*?</a>')){ $existing+=$m.Value }
 }
