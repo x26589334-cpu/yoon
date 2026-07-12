@@ -1,16 +1,16 @@
-# 설치 후기(블로그) 발행 + 목록 재정리 + sitemap 갱신
+﻿# 설치 후기(블로그) 발행 + 목록 재정리 + sitemap 갱신
 # BOM 포함 UTF-8로 저장해야 실행됨
 $ErrorActionPreference='Stop'
 $repo="$env:USERPROFILE\Desktop\yoon"
 $enc=New-Object System.Text.UTF8Encoding($false)
-$dateDot='2026.07.06'; $dateIso='2026-07-06'
+$dateDot='2026.07.12'; $dateIso='2026-07-12'
 
 $posts=@(
- @{slug='2026-07-06-gangseo';   city='강서';   region='서울 강서구'; tail='마곡·화곡 상권 결제 구축'; img='pos-install-16.jpg'; sang='마곡 첨단단지 상권과 화곡·등촌 생활권'; dongs='화곡동, 등촌동, 가양동, 마곡동, 염창동'},
- @{slug='2026-07-06-gwanak';    city='관악';   region='서울 관악구'; tail='신림·봉천 상권 결제 세팅'; img='pos-install-18.jpg'; sang='서울대입구 상권과 신림·봉천 생활권'; dongs='봉천동, 신림동, 남현동, 서원동, 청룡동'},
- @{slug='2026-07-06-guro';      city='구로';   region='서울 구로구'; tail='신도림·구로디지털 상권 결제 구축'; img='pos-install-20.jpg'; sang='신도림 상권과 구로디지털단지 생활권'; dongs='구로동, 신도림동, 개봉동, 고척동, 오류동'},
- @{slug='2026-07-06-dongjak';   city='동작';   region='서울 동작구'; tail='사당·노량진 상권 결제 세팅'; img='pos-install-23.jpg'; sang='노량진 상권과 사당·상도 생활권'; dongs='노량진동, 상도동, 사당동, 대방동, 흑석동'},
- @{slug='2026-07-06-seongdong'; city='성동';   region='서울 성동구'; tail='성수·왕십리 상권 결제 구축'; img='pos-install-26.jpg'; sang='성수동 카페 상권과 왕십리 생활권'; dongs='성수동, 왕십리동, 행당동, 금호동, 옥수동'}
+ @{slug='2026-07-12-gangbuk';   city='강북';   region='서울 강북구'; tail='수유·미아 상권 결제 구축'; img='pos-install-28.jpg'; sang='수유역 상권과 미아·번동 생활권'; dongs='미아동, 번동, 수유동, 우이동, 삼양동'},
+ @{slug='2026-07-12-geumcheon'; city='금천';   region='서울 금천구'; tail='가산·독산 상권 결제 세팅'; img='pos-install-31.jpg'; sang='가산디지털단지 상권과 독산·시흥 생활권'; dongs='가산동, 독산동, 시흥동'},
+ @{slug='2026-07-12-dobong';    city='도봉';   region='서울 도봉구'; tail='창동·쌍문 상권 결제 구축'; img='pos-install-34.jpg'; sang='창동 상권과 쌍문·방학 생활권'; dongs='창동, 쌍문동, 방학동, 도봉동'},
+ @{slug='2026-07-12-junggu';    city='중구';   region='서울 중구'; tail='명동·을지로 상권 결제 세팅'; img='pos-install-37.jpg'; sang='명동·을지로 도심 상권과 신당 생활권'; dongs='명동, 을지로, 충무로, 신당동, 회현동'},
+ @{slug='2026-07-12-gunpo';     city='군포';   region='경기 군포시'; tail='산본 상권 결제 구축'; img='pos-install-41.jpg'; sang='산본 신도시 상권과 금정·당동 생활권'; dongs='산본동, 금정동, 당동, 부곡동, 대야동'}
 )
 
 $postTpl=@'
