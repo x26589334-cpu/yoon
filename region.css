@@ -11,10 +11,7 @@ img{display:block;max-width:100%}
 .rwrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}
 .crumb2{font-size:.82rem;color:var(--muted);padding:15px 0}
 .rhero{display:grid;grid-template-columns:1fr 1.05fr;gap:36px;align-items:center;padding:14px 0 46px}
-.rhero .himg{width:100%;height:340px;object-fit:cover;object-position:center;border-radius:18px;box-shadow:var(--shadow)}
-/* 무인자판기 대표사진: 위쪽 문구가 아닌 자판기 본체가 보이도록 아래로 초점 이동 */
-.rhero .himg[src$="vending-01.jpg"]{height:420px;object-position:center 72%}
-@media(max-width:760px){.rhero .himg[src$="vending-01.jpg"]{height:300px;object-position:center 72%}}
+.rhero .himg{width:100%;height:340px;object-fit:cover;border-radius:18px;box-shadow:var(--shadow)}
 .rhero .loc{color:var(--brand-dark);font-weight:800;font-size:.9rem;margin-bottom:11px}
 .rhero h1{font-size:2.05rem;line-height:1.3;letter-spacing:-.02em}
 .rhero p.sub{color:var(--ink-soft);margin:16px 0 24px;font-size:1.02rem}
