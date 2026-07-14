@@ -1,6 +1,6 @@
 :root{--ink:#16202C;--ink-soft:#33414F;--brand:#0E9F6E;--brand-dark:#0A7E58;--bg:#F6F8F9;--paper:#fff;--line:#E4E9EC;--muted:#5C6B78;--maxw:860px}
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'Pretendard',system-ui,-apple-system,sans-serif;color:var(--ink);background:var(--bg);line-height:1.75;-webkit-font-smoothing:antialiased}
+body{font-family:'Pretendard Variable','Pretendard',system-ui,-apple-system,sans-serif;color:var(--ink);background:var(--bg);line-height:1.75;-webkit-font-smoothing:antialiased}
 a{color:inherit;text-decoration:none}
 img{display:block}
 header.bnav{background:var(--ink);color:#fff;position:sticky;top:0;z-index:10}

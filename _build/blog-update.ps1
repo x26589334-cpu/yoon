@@ -1,4 +1,4 @@
-﻿# 설치 후기(블로그) 발행 + 목록 재정리 + sitemap 갱신
+# 설치 후기(블로그) 발행 + 목록 재정리 + sitemap 갱신
 # BOM 포함 UTF-8로 저장해야 실행됨
 $ErrorActionPreference='Stop'
 $repo="$env:USERPROFILE\Desktop\yoon"
@@ -34,7 +34,7 @@ $postTpl=@'
 </script>
 <title>{{CITY}} 카드단말기·포스기 설치 후기 — H포스</title>
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
-<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
 <link rel="stylesheet" href="../blog.css" />
 </head>
 <body>
@@ -76,7 +76,7 @@ $pageTpl=@'
 <meta name="twitter:card" content="summary_large_image" />
 <title>설치 후기 ({{N}}/{{TP}}) — H포스 전국 카드단말기·포스기 설치</title>
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
-<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
 <link rel="stylesheet" href="blog.css" />
 </head>
 <body>
