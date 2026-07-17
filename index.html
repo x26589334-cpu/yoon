@@ -359,6 +359,9 @@
   }
   @media(max-width:560px){
     .why-grid{grid-template-columns:1fr}
+    .region.block{padding-top:26px}
+    .region .head{margin-bottom:22px}
+    .region .head p{font-size:.92rem}
     section.block{padding:56px 0}
     .price-tbl{font-size:.82rem}
     .price-tbl th,.price-tbl td{padding:9px 6px}
@@ -386,7 +389,7 @@
       H포스
     </a>
     <nav class="nav-links" id="navlinks">
-      <a href="#regions">지역 안내</a>
+      <a href="#regions">지역 찾기</a>
       <a href="#why">H포스</a>
       <a href="#industries">업종별 솔루션</a>
       <a href="product/vending.html">무인자판기</a><a href="#pricing">요금</a>
@@ -403,6 +406,26 @@
 <div class="crumb"><div class="wrap">홈 › <span>전국</span></div></div>
 
 <a id="top"></a>
+<section class="block region" id="regions">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">지역 찾기</span>
+      <h2>지역 찾기</h2>
+      <p>지역명을 검색하거나 아래에서 시·도와 시·군·구를 선택하면 해당 지역 설치 안내 페이지로 바로 이동합니다. 서울·인천·경기·대전·세종·청주·제주·경북·경남까지 동 단위로 방문합니다.</p>
+      <p style="margin-top:12px"><a href="regions.html" style="color:var(--brand);font-weight:800">📄 전국 설치 지역 전체 보기 (시·군·구 231곳) →</a></p>
+    </div>
+    <div class="prod-toggle reveal" id="prodToggle">
+      <button class="pt on" data-prod="pos" type="button">💳 포스기·카드단말기</button>
+      <button class="pt" data-prod="table" type="button">🍽️ 테이블오더</button>
+      <button class="pt" data-prod="vending" type="button">🥤 무인자판기</button>
+    </div>    <div class="region-search reveal">
+      <input id="regionSearch" type="text" placeholder="🔍 지역·동네 검색 (예: 강남구, 역삼동, 수원)" autocomplete="off" aria-label="지역 검색" />
+      <div id="regionResults" class="region-results"></div>
+    </div>
+    <div class="prov-grid reveal" id="provGrid"></div>
+    <div class="sgg-wrap reveal" id="sggWrap"></div><div class="reveal" id="prodCta" style="display:none;text-align:center;margin-top:6px"><a id="prodCtaLink" href="#" style="display:inline-block;background:var(--brand);color:#fff;font-weight:700;padding:15px 30px;border-radius:12px;font-size:1.02rem">자세히 보기</a></div>  </div>
+</section>
+
 <section class="hero">
   <div class="wrap hero-grid">
     <div class="reveal in">
@@ -436,6 +459,7 @@
     </div>
   </div>
 </section>
+
 
 <section class="block info">
   <div class="wrap">
@@ -506,25 +530,6 @@
     </div>
     <div class="lu-dots" id="luDots"></div>
   </div>
-</section>
-<section class="block region" id="regions">
-  <div class="wrap">
-    <div class="head reveal">
-      <span class="eyebrow">Coverage</span>
-      <h2>지역별 설치 안내</h2>
-      <p>지역명을 검색하거나 아래에서 시·도와 시·군·구를 선택하면 해당 지역 설치 안내 페이지로 바로 이동합니다. 서울·인천·경기·대전·세종·청주·제주·경북·경남까지 동 단위로 방문합니다.</p>
-      <p style="margin-top:12px"><a href="regions.html" style="color:var(--brand);font-weight:800">📄 전국 설치 지역 전체 보기 (시·군·구 231곳) →</a></p>
-    </div>
-    <div class="prod-toggle reveal" id="prodToggle">
-      <button class="pt on" data-prod="pos" type="button">💳 포스기·카드단말기</button>
-      <button class="pt" data-prod="table" type="button">🍽️ 테이블오더</button>
-      <button class="pt" data-prod="vending" type="button">🥤 무인자판기</button>
-    </div>    <div class="region-search reveal">
-      <input id="regionSearch" type="text" placeholder="🔍 지역·동네 검색 (예: 강남구, 역삼동, 수원)" autocomplete="off" aria-label="지역 검색" />
-      <div id="regionResults" class="region-results"></div>
-    </div>
-    <div class="prov-grid reveal" id="provGrid"></div>
-    <div class="sgg-wrap reveal" id="sggWrap"></div><div class="reveal" id="prodCta" style="display:none;text-align:center;margin-top:6px"><a id="prodCtaLink" href="#" style="display:inline-block;background:var(--brand);color:#fff;font-weight:700;padding:15px 30px;border-radius:12px;font-size:1.02rem">자세히 보기</a></div>  </div>
 </section>
 
 <section class="block" id="region-guide" style="background:var(--bg)">
@@ -915,7 +920,7 @@
         <p>서울 전역 카드단말기·포스기·키오스크 설치 전문. 설치비 무료, 업계 최저 수수료, 24시간 AS로 소상공인의 결제를 책임집니다.</p>
         <p style="margin-top:10px">📞 010-6832-1994 · 💬 카카오톡 채널: H포스 · 광고·스팸 전화는 정중히 사절합니다.</p>
       </div>
-      <div class="foot-links"><a href="#regions">지역 안내</a><a href="regions.html">전국 설치 지역</a>
+      <div class="foot-links"><a href="#regions">지역 찾기</a><a href="regions.html">전국 설치 지역</a>
         <a href="#why">H포스</a>
         <a href="#industries">업종별 솔루션</a>
         <a href="product/vending.html">무인자판기</a><a href="#pricing">요금</a>
