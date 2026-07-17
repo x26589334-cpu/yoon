@@ -350,9 +350,13 @@
     .hero-grid,.apply-wrap{grid-template-columns:1fr;gap:34px}
     .why-grid,.stats-grid{grid-template-columns:repeat(2,1fr);gap:28px 18px}
     .info-grid,.ind-grid{grid-template-columns:1fr}
-    .nav-links{display:none}
-    .nav-links.open{display:flex;position:absolute;top:66px;left:0;right:0;flex-direction:column;background:var(--bg);padding:18px 22px;gap:15px;border-bottom:1px solid var(--line)}
-    .menu-toggle{display:block}
+    .nav-inner{flex-wrap:wrap;height:auto;padding:9px 0 0;row-gap:0}
+    .logo{order:1}
+    .nav-cta{order:2}
+    .nav-links{order:3;display:flex;justify-content:space-between;width:100%;gap:9px;margin-top:8px;padding:9px 0;border-top:1px solid var(--line);overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;-ms-overflow-style:none}
+    .nav-links::-webkit-scrollbar{display:none}
+    .nav-links a{white-space:nowrap;font-size:.8rem;flex:none;font-weight:700}
+    .menu-toggle{display:none}
     .nav-cta .btn-ghost{display:none}
     .device-row{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
     .device-row .device{flex:0 1 calc(33.333% - 7px)}
