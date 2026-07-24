@@ -22,7 +22,7 @@ header.bnav{background:var(--ink);color:#fff;position:sticky;top:0;z-index:10}
 .post-card p{font-size:.9rem;color:var(--ink-soft)}
 article.post{background:#fff;border:1px solid var(--line);border-radius:18px;padding:32px;margin:30px 0 54px;box-shadow:0 16px 40px -28px rgba(22,32,44,.4)}
 article.post h1{font-size:1.55rem;margin:8px 0 18px;line-height:1.38;letter-spacing:-.02em}
-article.post img{width:100%;border-radius:13px;margin:18px 0}
+article.post img{display:block;width:100%;max-width:440px;height:auto;border-radius:13px;margin:18px auto}
 article.post p{margin:15px 0;color:var(--ink-soft)}
 article.post b{color:var(--ink)}
 .cta{display:block;text-align:center;background:var(--brand);color:#fff;font-weight:800;font-size:1.05rem;padding:16px;border-radius:13px;margin-top:26px}
