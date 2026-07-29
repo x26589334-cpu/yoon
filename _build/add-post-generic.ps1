@@ -4,12 +4,12 @@ $repo="$env:USERPROFILE\Desktop\yoon"
 $enc=New-Object System.Text.UTF8Encoding($false)
 
 # ==== 이 글에 맞게 지정 ====
-$rel='blog/2026-07-25-card-terminal-internet-vs-phone-line.html'
-$img='photos/pos-install-25.jpg'
-$alt='카드단말기 인터넷선과 전화선 차이 - 설치 현장 - H포스'
+$rel='blog/2026-07-25-bluetooth-vs-mobile-card-terminal.html'
+$img='photos/pos-install-50.jpg'
+$alt='블루투스 카드단말기와 무선 이동식 카드단말기 차이 - H포스'
 $label='카드단말기 가이드'
-$h='카드단말기 설치, 인터넷선과 전화선 차이 있을까요?'
-$summary='카드단말기 인터넷선(랜선)·전화선·무선 방식은 뭐가 다를까요? 승인 속도·안정성·필요 회선과 상황별 추천, 설치할 때 자주 묻는 것들까지 오픈 사장님 눈높이로 정리했습니다.'
+$h='블루투스 카드단말기와 무선 이동식 카드단말기 차이점?'
+$summary='같은 무선이라도 블루투스 카드단말기는 스마트폰·태블릿에 붙여 쓰고, 무선 이동식(휴대용) 카드단말기는 통신이 내장돼 폰 없이 단독 결제됩니다. 어떤 상황에 어떤 걸 신청해야 하는지 정리했습니다.'
 $lastmod='2026-07-25'
 # =========================
 
