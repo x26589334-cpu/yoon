@@ -161,6 +161,7 @@
 <div class="rfoot"><a href="../regions.html" style="color:var(--brand);font-weight:700">전국 설치 지역 전체 보기</a> · © 2026 H포스 · 전국 카드단말기·포스기·키오스크·테이블오더·무인자판기 설치</div>
 <script>(function(){var el=document.getElementById('liveCount');if(!el)return;function c(){var d=new Date(),h=d.getHours(),b;if(h>=9&&h<22){b=7+Math.round(Math.sin((h-9)/13*Math.PI)*9);}else{b=3;}b+=(d.getDate()%4);return Math.max(2,b+(Math.floor(Math.random()*5)-2));}function r(){el.textContent=c();}r();setInterval(r,6000);})();</script>
 <script src="../region-data.js"></script>
+<script src="../search-kit.js"></script>
 <script>
 (function(){
   var DATA=window.RDATA, DONGS=window.RDONGS, ALIAS=window.RALIAS||{};
@@ -178,8 +179,8 @@
   renderSgg(DATA[0]);
   sgg.addEventListener('click',function(e){if(!e.target.closest)return;var t=e.target.closest('.vs-item');if(t){e.preventDefault();renderDongs(t.getAttribute('data-slug'),t.getAttribute('data-name'));return;}var b=e.target.closest('.vs-back');if(b){e.preventDefault();renderSgg(curG);return;}});
   var cur=[];
-  function doSearch(){var raw=inp.value.trim();if(!raw){res.classList.remove('show');res.innerHTML='';return;}var toks=raw.toLowerCase().split(/\s+/).filter(Boolean);cur=FLAT.filter(function(r){return toks.every(function(t){return r.blob.indexOf(t)>-1;});});cur.sort(function(a,b){function rk(x){return x.name===raw?0:(x.name.indexOf(raw)===0?1:2);}return rk(a)-rk(b)||a.name.length-b.name.length;});cur=cur.slice(0,16);if(!cur.length){res.innerHTML='<div class="vs-no">검색 결과가 없어요. 전화 상담 010-6832-1994</div>';res.classList.add('show');return;}res.innerHTML=cur.map(function(r){return '<a href="'+url(r.slug,r.dg?r.name:null)+'">'+r.name+' 무인자판기<span class="vs-tag">'+r.tag+'</span></a>';}).join('');res.classList.add('show');}
-  inp.addEventListener('input',doSearch);
+  var YREL=['tag','name'];SearchKit.style();function relHtml(items,label){if(!items.length)return '';return '<div class="sk-rel" style="padding:10px 14px 12px">'+'<span class="sk-rel-label">'+SearchKit.esc(label)+'</span>'+items.map(function(it){return '<button type="button" class="sk-chip" data-term="'+SearchKit.esc(it.term)+'">'+SearchKit.esc(it.label)+'</button>';}).join('')+'</div>';}function relOf(all,raw){return all.length?SearchKit.related(all,raw,YREL,{limit:5}):SearchKit.suggest(FLAT,function(r){return r.hay;},raw,YREL,{limit:5});}function doSearch(){var raw=inp.value.trim();if(!raw){res.classList.remove('show');res.innerHTML='';return;}var toks=raw.toLowerCase().split(/\s+/).filter(Boolean);FLAT.forEach(function(r){if(!r.hay)r.hay={s:r.blob,ns:r.blob};});cur=FLAT.filter(function(r){return SearchKit.match(r.hay,raw);});cur.sort(function(a,b){function rk(x){return x.name===raw?0:(x.name.indexOf(raw)===0?1:2);}return rk(a)-rk(b)||a.name.length-b.name.length;});var _hits=cur;cur=cur.slice(0,16);if(!cur.length){res.innerHTML='<div class="vs-no">검색 결과가 없어요. 전화 상담 010-6832-1994</div>'+relHtml(relOf([],raw),'이렇게 찾아보세요');res.classList.add('show');return;}res.innerHTML=cur.map(function(r){return '<a href="'+url(r.slug,r.dg?r.name:null)+'">'+r.name+' 무인자판기<span class="vs-tag">'+r.tag+'</span></a>';}).join('')+relHtml(relOf(_hits,raw),'연관 검색어');res.classList.add('show');}
+  inp.addEventListener('input',doSearch);res.addEventListener('click',function(e){var c=e.target.closest&&e.target.closest('.sk-chip');if(!c)return;e.preventDefault();inp.value=c.getAttribute('data-term');inp.focus();doSearch();});
   inp.addEventListener('keydown',function(e){if(e.key==='Enter'&&cur.length){var c=cur[0];location.href=url(c.slug,c.dg?c.name:null);}});
   document.addEventListener('click',function(e){if(!inp.contains(e.target)&&!res.contains(e.target)){res.classList.remove('show');}});
 })();
