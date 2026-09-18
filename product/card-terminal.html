@@ -133,7 +133,7 @@
   var FLAT=[],PSHORT={},DMAP={};
   DATA.forEach(function(g){g.items.forEach(function(it){PSHORT[it[1]]=g.p;FLAT.push({name:it[0],slug:it[1],tag:g.p,blob:(it[0]+'시'+it[1]+g.p+(ALIAS[it[1]]||'')).toLowerCase().replace(/\s/g,'')});});});
   DONGS.forEach(function(d){DMAP[d[0]]={n:d[1],dongs:d[2]};var sl=d[0],gu=d[1];d[2].forEach(function(n){FLAT.push({name:n,slug:sl,tag:gu,dg:1,blob:(n+gu+'시'+sl+(ALIAS[sl]||'')+(PSHORT[sl]||'')).toLowerCase().replace(/\s/g,'')});});});
-  function url(s,dg){var u='../region/'+s+'.html';return dg?(u+'?dong='+encodeURIComponent(dg)):u;}
+  function url(s,dg){if(!s||s.length<4)return'#';var u='../region/'+s+'.html';return dg?(u+'?dong='+encodeURIComponent(dg)):u;}
   var curG=DATA[0];
   DATA.forEach(function(g,i){var b=document.createElement('button');b.type='button';b.className='vs-pbtn'+(i===0?' on':'');b.textContent=g.p;b.addEventListener('click',function(){prov.querySelectorAll('.vs-pbtn').forEach(function(x){x.classList.remove('on');});b.classList.add('on');renderSgg(g);});prov.appendChild(b);});
   function renderSgg(g){curG=g;var h='<div class="vs-h">'+g.full+'</div><div class="vs-d">시·군·구를 선택하면 동 단위까지 확인할 수 있어요.</div><div class="vs-grid">';g.items.forEach(function(it){h+='<a href="#" class="vs-item" data-slug="'+it[1]+'" data-name="'+it[0]+'">'+it[0]+' ›</a>';});h+='</div>';sgg.innerHTML=h;}
